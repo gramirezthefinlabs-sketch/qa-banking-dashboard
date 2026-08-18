@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import altair as alt
 import pandas as pd
 import streamlit as st
 
@@ -132,10 +133,46 @@ with tab_summary:
         )
         st.line_chart(daily, color="#2457a7", height=340)
 
-    st.markdown("#### Resultado de ejecución por módulo")
-    module_status = pd.crosstab(filtered["modulo"], filtered["estado"])
-    ordered = [name for name in STATUS_COLORS if name in module_status.columns]
-    st.bar_chart(module_status[ordered], color=[STATUS_COLORS[name] for name in ordered], height=390)
+    st.markdown("#### Distribución de resultados por módulo (%)")
+    ordered = list(STATUS_COLORS)
+    module_status = (
+        pd.crosstab(filtered["modulo"], filtered["estado"], normalize="index")
+        .reindex(columns=ordered, fill_value=0)
+        .mul(100)
+    )
+    risk_order = (
+        module_status.get("Fallido", 0) + module_status.get("Bloqueado", 0)
+    ).sort_values(ascending=False).index.tolist()
+    module_status_long = (
+        module_status.reset_index()
+        .melt(id_vars="modulo", var_name="Estado", value_name="Porcentaje")
+    )
+    module_chart = (
+        alt.Chart(module_status_long)
+        .mark_bar()
+        .encode(
+            y=alt.Y("modulo:N", sort=risk_order, title=None),
+            x=alt.X(
+                "Porcentaje:Q",
+                stack="zero",
+                scale=alt.Scale(domain=[0, 100]),
+                axis=alt.Axis(title="Porcentaje de casos", format=".0f"),
+            ),
+            color=alt.Color(
+                "Estado:N",
+                scale=alt.Scale(domain=ordered, range=[STATUS_COLORS[name] for name in ordered]),
+                legend=alt.Legend(orient="bottom", title=None),
+            ),
+            order=alt.Order("Estado:N", sort="ascending"),
+            tooltip=[
+                alt.Tooltip("modulo:N", title="Módulo"),
+                alt.Tooltip("Estado:N"),
+                alt.Tooltip("Porcentaje:Q", title="Porcentaje", format=".1f"),
+            ],
+        )
+        .properties(height=350)
+    )
+    st.altair_chart(module_chart, use_container_width=True)
 
 with tab_risk:
     a, b = st.columns(2)
