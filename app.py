@@ -289,6 +289,65 @@ with tab_risk:
             f"Fecha de referencia: {reference_date:%d/%m/%Y}. "
             "La fecha de ejecución se utiliza como fecha de reporte del defecto."
         )
+        st.markdown("##### Referencias de defectos por antigüedad")
+        selected_aging_range = st.selectbox(
+            "Rango de antigüedad",
+            ["Todos"] + aging_order,
+            key="aging_range_filter",
+        )
+        aging_detail = defect_aging.copy()
+        if selected_aging_range != "Todos":
+            aging_detail = aging_detail[
+                aging_detail["Rango de añejamiento"] == selected_aging_range
+            ]
+        aging_detail["Rango de antigüedad"] = (
+            aging_detail["Rango de añejamiento"].astype(str)
+        )
+        aging_detail = (
+            aging_detail[
+                [
+                    "defecto_id",
+                    "Días de antigüedad",
+                    "Rango de antigüedad",
+                    "caso_id",
+                    "estado",
+                    "modulo",
+                    "severidad_defecto",
+                    "fecha_ejecucion",
+                ]
+            ]
+            .drop_duplicates(subset=["defecto_id"])
+            .sort_values(
+                ["Días de antigüedad", "defecto_id"],
+                ascending=[False, True],
+            )
+            .rename(
+                columns={
+                    "defecto_id": "Referencia del defecto",
+                    "caso_id": "Caso vinculado",
+                    "estado": "Resultado del caso",
+                    "modulo": "Módulo",
+                    "severidad_defecto": "Severidad",
+                    "fecha_ejecucion": "Fecha de reporte",
+                }
+            )
+        )
+        st.dataframe(
+            aging_detail,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Fecha de reporte": st.column_config.DateColumn(
+                    "Fecha de reporte",
+                    format="DD/MM/YYYY",
+                ),
+                "Días de antigüedad": st.column_config.NumberColumn(
+                    "Días de antigüedad",
+                    format="%d días",
+                ),
+            },
+        )
+
 
 
     a, b = st.columns(2)
