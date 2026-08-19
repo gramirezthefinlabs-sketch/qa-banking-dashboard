@@ -19,11 +19,18 @@ STATUS_COLORS = {
     "Bloqueado": "#f59e0b",
     "No ejecutado": "#64748b",
 }
+PRIORITY_LABELS = {
+    "Crítica": "1-Crítica",
+    "Alta": "2-Alta",
+    "Media": "3-Media",
+    "Baja": "4-Baja",
+}
 
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
     data = pd.read_csv(DATA_PATH, parse_dates=["fecha_ejecucion"])
+    data["prioridad"] = data["prioridad"].replace(PRIORITY_LABELS)
     return data
 
 
