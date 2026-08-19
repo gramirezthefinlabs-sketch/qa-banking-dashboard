@@ -191,11 +191,12 @@ with tab_summary:
         module_status.reset_index()
         .melt(id_vars="modulo", var_name="Estado", value_name="Porcentaje")
     )
-    module_chart = px.scatter(
+    module_chart = px.bar(
         module_status_long,
         x="Porcentaje",
         y="modulo",
         color="Estado",
+        orientation="h",
         category_orders={
             "modulo": risk_order[::-1],
             "Estado": ordered,
@@ -203,7 +204,6 @@ with tab_summary:
         color_discrete_map=STATUS_COLORS,
     )
     module_chart.update_traces(
-        marker=dict(size=13, opacity=0.9),
         hovertemplate=(
             "<b>%{y}</b><br>Estado: %{fullData.name}<br>"
             "Porcentaje: %{x:.1f}%<extra></extra>"
@@ -211,6 +211,7 @@ with tab_summary:
     )
     module_chart.update_layout(
         height=380,
+        barmode="stack",
         xaxis_title="Porcentaje de casos",
         yaxis_title=None,
         xaxis=dict(range=[0, 100], ticksuffix="%"),
