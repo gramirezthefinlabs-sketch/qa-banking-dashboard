@@ -249,10 +249,20 @@ with tab_risk:
             critico=(filtered["severidad_defecto"] == "Crítica").astype(int),
         )
         .groupby("modulo")
-        .agg(Casos=("caso_id", "count"), Atención=("requiere_atencion", "sum"), Críticos=("critico", "sum"))
+        .agg(
+            Casos=("caso_id", "count"),
+            **{
+                "Casos fallidos y bloqueados": ("requiere_atencion", "sum"),
+                "Defectos críticos": ("critico", "sum"),
+            },
+        )
     )
-    risk_by_module["Riesgo %"] = (risk_by_module["Atención"] / risk_by_module["Casos"] * 100).round(1)
-    risk_by_module = risk_by_module.sort_values(["Críticos", "Riesgo %"], ascending=False)
+    risk_by_module["Riesgo %"] = (
+        risk_by_module["Casos fallidos y bloqueados"] / risk_by_module["Casos"] * 100
+    ).round(1)
+    risk_by_module = risk_by_module.sort_values(
+        ["Defectos críticos", "Riesgo %"], ascending=False
+    )
     st.dataframe(risk_by_module, use_container_width=True)
 
 with tab_detail:
