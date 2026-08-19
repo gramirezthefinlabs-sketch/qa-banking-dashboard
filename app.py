@@ -228,6 +228,69 @@ with tab_summary:
     st.plotly_chart(module_chart, use_container_width=True)
 
 with tab_risk:
+    st.markdown("#### Añejamiento de defectos vinculados a casos fallidos y bloqueados")
+    defect_aging = filtered[
+        filtered["estado"].isin(["Fallido", "Bloqueado"])
+        & filtered["defecto_id"].notna()
+    ].copy()
+    if defect_aging.empty:
+        st.info("No existen defectos vinculados a casos fallidos o bloqueados para los filtros seleccionados.")
+    else:
+        reference_date = df["fecha_ejecucion"].max()
+        defect_aging["Días de antigüedad"] = (
+            reference_date - defect_aging["fecha_ejecucion"]
+        ).dt.days.clip(lower=0)
+        aging_order = ["0-7 días", "8-15 días", "16-30 días", "Más de 30 días"]
+        defect_aging["Rango de añejamiento"] = pd.cut(
+            defect_aging["Días de antigüedad"],
+            bins=[-1, 7, 15, 30, float("inf")],
+            labels=aging_order,
+        )
+        aging_summary = (
+            defect_aging.groupby(
+                ["Rango de añejamiento", "estado"],
+                observed=True,
+            )["defecto_id"]
+            .nunique()
+            .reset_index(name="Defectos")
+        )
+        aging_chart = px.bar(
+            aging_summary,
+            x="Rango de añejamiento",
+            y="Defectos",
+            color="estado",
+            barmode="group",
+            text="Defectos",
+            category_orders={
+                "Rango de añejamiento": aging_order,
+                "estado": ["Fallido", "Bloqueado"],
+            },
+            color_discrete_map={
+                "Fallido": STATUS_COLORS["Fallido"],
+                "Bloqueado": STATUS_COLORS["Bloqueado"],
+            },
+        )
+        aging_chart.update_traces(
+            textposition="outside",
+            hovertemplate=(
+                "<b>%{x}</b><br>Resultado: %{fullData.name}<br>"
+                "Defectos: %{y}<extra></extra>"
+            ),
+        )
+        aging_chart.update_layout(
+            height=360,
+            xaxis_title="Antigüedad desde la fecha de ejecución",
+            yaxis_title="Cantidad de defectos",
+            legend_title_text="Caso vinculado",
+            margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(aging_chart, use_container_width=True)
+        st.caption(
+            f"Fecha de referencia: {reference_date:%d/%m/%Y}. "
+            "La fecha de ejecución se utiliza como fecha de reporte del defecto."
+        )
+
+
     a, b = st.columns(2)
     with a:
         st.markdown("#### Casos de atención por prioridad")
