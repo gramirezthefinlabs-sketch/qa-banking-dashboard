@@ -1,7 +1,7 @@
 from pathlib import Path
 
-import altair as alt
 import pandas as pd
+import plotly.express as px
 import streamlit as st
 
 
@@ -132,31 +132,50 @@ with tab_summary:
             .rename_axis("Estado")
             .reset_index(name="Casos")
         )
-        status_chart = (
-            alt.Chart(status_counts)
-            .mark_bar(cornerRadiusTopLeft=5, cornerRadiusTopRight=5)
-            .encode(
-                x=alt.X("Estado:N", sort=ordered, title=None),
-                y=alt.Y("Casos:Q", title="Cantidad de casos"),
-                color=alt.Color(
-                    "Estado:N",
-                    scale=alt.Scale(
-                        domain=ordered,
-                        range=[STATUS_COLORS[name] for name in ordered],
-                    ),
-                    legend=None,
-                ),
-                tooltip=[alt.Tooltip("Estado:N"), alt.Tooltip("Casos:Q")],
-            )
-            .properties(height=340)
+        status_chart = px.bar(
+            status_counts,
+            x="Estado",
+            y="Casos",
+            color="Estado",
+            text="Casos",
+            category_orders={"Estado": ordered},
+            color_discrete_map=STATUS_COLORS,
         )
-        st.altair_chart(status_chart, use_container_width=True)
+        status_chart.update_traces(
+            textposition="outside",
+            hovertemplate="<b>%{x}</b><br>Casos: %{y}<extra></extra>",
+        )
+        status_chart.update_layout(
+            height=340,
+            showlegend=False,
+            xaxis_title=None,
+            yaxis_title="Cantidad de casos",
+            margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(status_chart, use_container_width=True)
     with right:
         st.markdown("#### Ejecución acumulada por fecha")
         daily = (
             executed.groupby("fecha_ejecucion").size().rename("Ejecutados").sort_index().cumsum()
+            .reset_index()
         )
-        st.line_chart(daily, color="#2457a7", height=340)
+        execution_chart = px.line(
+            daily,
+            x="fecha_ejecucion",
+            y="Ejecutados",
+            markers=True,
+        )
+        execution_chart.update_traces(
+            line_color="#2457a7",
+            hovertemplate="<b>%{x|%d/%m/%Y}</b><br>Ejecutados: %{y}<extra></extra>",
+        )
+        execution_chart.update_layout(
+            height=340,
+            xaxis_title="Fecha",
+            yaxis_title="Casos ejecutados acumulados",
+            margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(execution_chart, use_container_width=True)
 
     st.markdown("#### Distribución de resultados por módulo (%)")
     ordered = list(STATUS_COLORS)
@@ -172,30 +191,34 @@ with tab_summary:
         module_status.reset_index()
         .melt(id_vars="modulo", var_name="Estado", value_name="Porcentaje")
     )
-    module_chart = (
-        alt.Chart(module_status_long)
-        .mark_circle(size=145, opacity=0.9)
-        .encode(
-            y=alt.Y("modulo:N", sort=risk_order, title=None),
-            x=alt.X(
-                "Porcentaje:Q",
-                scale=alt.Scale(domain=[0, 100]),
-                axis=alt.Axis(title="Porcentaje de casos", format=".0f"),
-            ),
-            color=alt.Color(
-                "Estado:N",
-                scale=alt.Scale(domain=ordered, range=[STATUS_COLORS[name] for name in ordered]),
-                legend=alt.Legend(orient="bottom", title=None),
-            ),
-            tooltip=[
-                alt.Tooltip("modulo:N", title="Módulo"),
-                alt.Tooltip("Estado:N"),
-                alt.Tooltip("Porcentaje:Q", title="Porcentaje", format=".1f"),
-            ],
-        )
-        .properties(height=350)
+    module_chart = px.scatter(
+        module_status_long,
+        x="Porcentaje",
+        y="modulo",
+        color="Estado",
+        category_orders={
+            "modulo": risk_order[::-1],
+            "Estado": ordered,
+        },
+        color_discrete_map=STATUS_COLORS,
     )
-    st.altair_chart(module_chart, use_container_width=True)
+    module_chart.update_traces(
+        marker=dict(size=13, opacity=0.9),
+        hovertemplate=(
+            "<b>%{y}</b><br>Estado: %{fullData.name}<br>"
+            "Porcentaje: %{x:.1f}%<extra></extra>"
+        ),
+    )
+    module_chart.update_layout(
+        height=380,
+        xaxis_title="Porcentaje de casos",
+        yaxis_title=None,
+        xaxis=dict(range=[0, 100], ticksuffix="%"),
+        legend_title_text=None,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+        margin=dict(l=10, r=10, t=45, b=10),
+    )
+    st.plotly_chart(module_chart, use_container_width=True)
 
 with tab_risk:
     a, b = st.columns(2)
