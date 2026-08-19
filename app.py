@@ -124,8 +124,33 @@ with tab_summary:
     left, right = st.columns(2)
     with left:
         st.markdown("#### Distribución por estado")
-        status_counts = filtered["estado"].value_counts().rename("Casos")
-        st.bar_chart(status_counts, color="#1f8a8a", height=340)
+        ordered = list(STATUS_COLORS)
+        status_counts = (
+            filtered["estado"]
+            .value_counts()
+            .reindex(ordered, fill_value=0)
+            .rename_axis("Estado")
+            .reset_index(name="Casos")
+        )
+        status_chart = (
+            alt.Chart(status_counts)
+            .mark_bar(cornerRadiusTopLeft=5, cornerRadiusTopRight=5)
+            .encode(
+                x=alt.X("Estado:N", sort=ordered, title=None),
+                y=alt.Y("Casos:Q", title="Cantidad de casos"),
+                color=alt.Color(
+                    "Estado:N",
+                    scale=alt.Scale(
+                        domain=ordered,
+                        range=[STATUS_COLORS[name] for name in ordered],
+                    ),
+                    legend=None,
+                ),
+                tooltip=[alt.Tooltip("Estado:N"), alt.Tooltip("Casos:Q")],
+            )
+            .properties(height=340)
+        )
+        st.altair_chart(status_chart, use_container_width=True)
     with right:
         st.markdown("#### Ejecución acumulada por fecha")
         daily = (
@@ -149,12 +174,11 @@ with tab_summary:
     )
     module_chart = (
         alt.Chart(module_status_long)
-        .mark_bar()
+        .mark_circle(size=145, opacity=0.9)
         .encode(
             y=alt.Y("modulo:N", sort=risk_order, title=None),
             x=alt.X(
                 "Porcentaje:Q",
-                stack="zero",
                 scale=alt.Scale(domain=[0, 100]),
                 axis=alt.Axis(title="Porcentaje de casos", format=".0f"),
             ),
@@ -163,7 +187,6 @@ with tab_summary:
                 scale=alt.Scale(domain=ordered, range=[STATUS_COLORS[name] for name in ordered]),
                 legend=alt.Legend(orient="bottom", title=None),
             ),
-            order=alt.Order("Estado:N", sort="ascending"),
             tooltip=[
                 alt.Tooltip("modulo:N", title="Módulo"),
                 alt.Tooltip("Estado:N"),
