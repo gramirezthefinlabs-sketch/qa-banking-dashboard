@@ -138,25 +138,41 @@ with tab_summary:
             .rename_axis("Estado")
             .reset_index(name="Casos")
         )
-        status_chart = px.bar(
+        status_counts["Estado"] = pd.Categorical(
+            status_counts["Estado"],
+            categories=ordered,
+            ordered=True,
+        )
+        status_counts = status_counts.sort_values("Estado")
+        status_chart = px.pie(
             status_counts,
-            x="Estado",
-            y="Casos",
+            names="Estado",
+            values="Casos",
             color="Estado",
-            text="Casos",
-            category_orders={"Estado": ordered},
+            hole=0.45,
             color_discrete_map=STATUS_COLORS,
         )
         status_chart.update_traces(
+            textinfo="label+percent",
             textposition="outside",
-            hovertemplate="<b>%{x}</b><br>Casos: %{y}<extra></extra>",
+            hovertemplate=(
+                "<b>%{label}</b><br>Casos: %{value}<br>"
+                "Participación: %{percent}<extra></extra>"
+            ),
         )
         status_chart.update_layout(
             height=340,
-            showlegend=False,
-            xaxis_title=None,
-            yaxis_title="Cantidad de casos",
+            legend_title_text=None,
             margin=dict(l=10, r=10, t=10, b=10),
+            annotations=[
+                dict(
+                    text=f"<b>{int(status_counts['Casos'].sum())}</b><br>casos",
+                    x=0.5,
+                    y=0.5,
+                    font_size=18,
+                    showarrow=False,
+                )
+            ],
         )
         st.plotly_chart(status_chart, use_container_width=True)
     with right:
