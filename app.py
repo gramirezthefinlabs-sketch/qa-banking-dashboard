@@ -56,6 +56,21 @@ st.markdown(
     [data-testid="stSidebar"] {background: #083B55;}
     [data-testid="stSidebar"] * {color: #ffffff;}
     [data-testid="stSidebar"] h1 {color: #F4B223;}
+    [data-testid="stSidebar"] [data-baseweb="select"] > div,
+    [data-testid="stSidebar"] [data-baseweb="input"] > div {
+        background: #0B5D7A; border-color: #3A86A2;
+    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] {
+        background: #16779A; border: 1px solid #65AEC5;
+    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] span,
+    [data-testid="stSidebar"] input {color: #ffffff !important;}
+    [data-testid="stSidebar"] [data-baseweb="select"] svg,
+    [data-testid="stSidebar"] [data-baseweb="tag"] svg {fill: #F4B223;}
+    [data-testid="stSidebar"] [data-testid="stImage"] {
+        background: #ffffff; border-radius: 10px; padding: 12px;
+        margin-bottom: .7rem; box-shadow: 0 3px 10px rgba(0,0,0,.18);
+    }
     [data-testid="stMetric"] {
         background: white; border: 1px solid #D6E5EC; border-top: 3px solid #F4B223;
         border-radius: 12px; padding: 14px 16px;
@@ -79,6 +94,7 @@ st.markdown(
 df = load_data()
 
 with st.sidebar:
+    st.image(LOGO_PATH, width=260)
     st.title("🏦 Filtros QA")
     st.caption("Banco ficticio · Datos demostrativos")
     selected_modules = st.multiselect("Módulo", options("modulo"), default=options("modulo"))
@@ -106,12 +122,8 @@ filtered = df[
     & df["fecha_ejecucion"].dt.date.between(start_date, end_date)
 ].copy()
 
-title_col, logo_col = st.columns([4, 1])
-with title_col:
-    st.title("QA Banking Dashboard")
-    st.subheader("Control de casos de prueba del banco ficticio NovaBank")
-with logo_col:
-    st.image(LOGO_PATH, width=250)
+st.title("QA Banking Dashboard")
+st.subheader("Control de casos de prueba del banco ficticio NovaBank")
 st.markdown(
     '<div class="dashboard-note">Panel académico con datos simulados. No contiene información real de clientes ni del banco.</div>',
     unsafe_allow_html=True,
