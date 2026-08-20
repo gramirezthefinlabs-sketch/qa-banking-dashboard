@@ -2,6 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 
@@ -270,37 +271,53 @@ with tab_risk:
             .nunique()
             .reset_index(name="Defectos")
         )
-        aging_chart = px.bar(
-            aging_summary,
-            x="Rango de añejamiento",
-            y="Defectos",
-            color="estado",
-            barmode="group",
-            text="Defectos",
-            category_orders={
-                "Rango de añejamiento": aging_order,
-                "estado": ["Fallido", "Bloqueado"],
-            },
-            color_discrete_map={
-                "Fallido": STATUS_COLORS["Fallido"],
-                "Bloqueado": STATUS_COLORS["Bloqueado"],
-            },
+        funnel_width = [100, 75, 50, 25]
+
+        def build_aging_funnel(status: str, color: str) -> go.Figure:
+            status_counts = (
+                aging_summary[aging_summary["estado"] == status]
+                .set_index("Rango de añejamiento")["Defectos"]
+                .reindex(aging_order, fill_value=0)
+                .astype(int)
+                .tolist()
+            )
+            figure = go.Figure(
+                go.Funnel(
+                    y=aging_order,
+                    x=funnel_width,
+                    customdata=status_counts,
+                    texttemplate="%{y}<br><b>%{customdata} defectos</b>",
+                    hovertemplate=(
+                        "<b>%{y}</b><br>Defectos: %{customdata}"
+                        "<extra></extra>"
+                    ),
+                    marker=dict(color=[color] * len(aging_order)),
+                    connector=dict(line=dict(color="#dbe4ee", width=1)),
+                )
+            )
+            figure.update_layout(
+                height=410,
+                title=dict(text=status, x=0.5, xanchor="center"),
+                margin=dict(l=10, r=10, t=55, b=10),
+                xaxis=dict(visible=False),
+            )
+            return figure
+
+        failed_col, blocked_col = st.columns(2)
+        with failed_col:
+            st.plotly_chart(
+                build_aging_funnel("Fallido", STATUS_COLORS["Fallido"]),
+                use_container_width=True,
+            )
+        with blocked_col:
+            st.plotly_chart(
+                build_aging_funnel("Bloqueado", STATUS_COLORS["Bloqueado"]),
+                use_container_width=True,
+            )
+        st.caption(
+            "El ancho representa el avance del añejamiento; "
+            "las etiquetas muestran la cantidad real de defectos."
         )
-        aging_chart.update_traces(
-            textposition="outside",
-            hovertemplate=(
-                "<b>%{x}</b><br>Resultado: %{fullData.name}<br>"
-                "Defectos: %{y}<extra></extra>"
-            ),
-        )
-        aging_chart.update_layout(
-            height=360,
-            xaxis_title="Antigüedad desde la fecha de ejecución",
-            yaxis_title="Cantidad de defectos",
-            legend_title_text="Caso vinculado",
-            margin=dict(l=10, r=10, t=10, b=10),
-        )
-        st.plotly_chart(aging_chart, use_container_width=True)
         st.caption(
             f"Fecha de referencia: {reference_date:%d/%m/%Y}. "
             "La fecha de ejecución se utiliza como fecha de reporte del defecto."
