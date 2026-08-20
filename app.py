@@ -543,6 +543,94 @@ with tab_risk:
             )
 
 
+    st.markdown("#### Boxplot de criticidad en casos fallidos y bloqueados")
+    attention_box = filtered[
+        filtered["estado"].isin(["Fallido", "Bloqueado"])
+    ].copy()
+    if attention_box.empty:
+        st.info("No existen casos fallidos o bloqueados para construir el boxplot.")
+    else:
+        criticality_score = {
+            "1-Crítica": 4,
+            "2-Alta": 3,
+            "3-Media": 2,
+            "4-Baja": 1,
+        }
+        attention_box["Puntuación de criticidad"] = (
+            attention_box["prioridad"].map(criticality_score)
+        )
+        criticality_boxplot = px.box(
+            attention_box,
+            x="estado",
+            y="Puntuación de criticidad",
+            color="estado",
+            points="all",
+            category_orders={
+                "estado": ["Fallido", "Bloqueado"],
+            },
+            color_discrete_map={
+                "Fallido": STATUS_COLORS["Fallido"],
+                "Bloqueado": STATUS_COLORS["Bloqueado"],
+            },
+            hover_name="caso_id",
+            hover_data={
+                "prioridad": True,
+                "modulo": True,
+                "estado": False,
+                "Puntuación de criticidad": False,
+            },
+        )
+        criticality_boxplot.update_traces(
+            jitter=0.30,
+            pointpos=0,
+            marker=dict(size=7, opacity=0.65),
+        )
+        criticality_boxplot.update_layout(
+            height=410,
+            xaxis_title="Resultado del caso",
+            yaxis_title="Nivel de criticidad",
+            showlegend=False,
+            margin=dict(l=10, r=10, t=10, b=10),
+        )
+        criticality_boxplot.update_yaxes(
+            tickmode="array",
+            tickvals=[1, 2, 3, 4],
+            ticktext=["1 · Baja", "2 · Media", "3 · Alta", "4 · Crítica"],
+            range=[0.5, 4.5],
+        )
+        st.plotly_chart(criticality_boxplot, use_container_width=True)
+
+        outlier_counts = {}
+        for case_status, status_group in attention_box.groupby("estado"):
+            first_quartile = status_group[
+                "Puntuación de criticidad"
+            ].quantile(0.25)
+            third_quartile = status_group[
+                "Puntuación de criticidad"
+            ].quantile(0.75)
+            interquartile_range = third_quartile - first_quartile
+            lower_limit = first_quartile - 1.5 * interquartile_range
+            upper_limit = third_quartile + 1.5 * interquartile_range
+            outlier_counts[case_status] = int(
+                (
+                    (
+                        status_group["Puntuación de criticidad"]
+                        < lower_limit
+                    )
+                    |
+                    (
+                        status_group["Puntuación de criticidad"]
+                        > upper_limit
+                    )
+                ).sum()
+            )
+        st.caption(
+            "Outliers según el método IQR (1.5 × rango intercuartílico): "
+            f"Fallidos: {outlier_counts.get('Fallido', 0)} · "
+            f"Bloqueados: {outlier_counts.get('Bloqueado', 0)}."
+        )
+
+
     a, b = st.columns(2)
     with a:
         st.markdown("#### Casos de atención por prioridad")
