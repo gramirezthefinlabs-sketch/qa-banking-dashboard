@@ -272,51 +272,91 @@ with tab_risk:
             .reset_index(name="Defectos")
         )
         funnel_width = [100, 75, 50, 25]
+        failed_counts = (
+            aging_summary[aging_summary["estado"] == "Fallido"]
+            .set_index("Rango de añejamiento")["Defectos"]
+            .reindex(aging_order, fill_value=0)
+            .astype(int)
+            .tolist()
+        )
+        blocked_counts = (
+            aging_summary[aging_summary["estado"] == "Bloqueado"]
+            .set_index("Rango de añejamiento")["Defectos"]
+            .reindex(aging_order, fill_value=0)
+            .astype(int)
+            .tolist()
+        )
+        stage_totals = [
+            failed + blocked
+            for failed, blocked in zip(failed_counts, blocked_counts)
+        ]
+        failed_width = [
+            width * failed / total if total else 0
+            for width, failed, total in zip(
+                funnel_width,
+                failed_counts,
+                stage_totals,
+            )
+        ]
+        blocked_width = [
+            width * blocked / total if total else 0
+            for width, blocked, total in zip(
+                funnel_width,
+                blocked_counts,
+                stage_totals,
+            )
+        ]
 
-        def build_aging_funnel(status: str, color: str) -> go.Figure:
-            status_counts = (
-                aging_summary[aging_summary["estado"] == status]
-                .set_index("Rango de añejamiento")["Defectos"]
-                .reindex(aging_order, fill_value=0)
-                .astype(int)
-                .tolist()
+        aging_funnel = go.Figure()
+        aging_funnel.add_trace(
+            go.Funnel(
+                name="Fallido",
+                y=aging_order,
+                x=failed_width,
+                customdata=failed_counts,
+                texttemplate="<b>%{customdata}</b>",
+                hovertemplate=(
+                    "<b>%{y}</b><br>Casos fallidos: %{customdata}"
+                    "<extra></extra>"
+                ),
+                marker=dict(color=STATUS_COLORS["Fallido"]),
+                connector=dict(line=dict(color="#ffffff", width=1)),
             )
-            figure = go.Figure(
-                go.Funnel(
-                    y=aging_order,
-                    x=funnel_width,
-                    customdata=status_counts,
-                    texttemplate="%{y}<br><b>%{customdata} defectos</b>",
-                    hovertemplate=(
-                        "<b>%{y}</b><br>Defectos: %{customdata}"
-                        "<extra></extra>"
-                    ),
-                    marker=dict(color=[color] * len(aging_order)),
-                    connector=dict(line=dict(color="#dbe4ee", width=1)),
-                )
+        )
+        aging_funnel.add_trace(
+            go.Funnel(
+                name="Bloqueado",
+                y=aging_order,
+                x=blocked_width,
+                customdata=blocked_counts,
+                texttemplate="<b>%{customdata}</b>",
+                hovertemplate=(
+                    "<b>%{y}</b><br>Casos bloqueados: %{customdata}"
+                    "<extra></extra>"
+                ),
+                marker=dict(color=STATUS_COLORS["Bloqueado"]),
+                connector=dict(line=dict(color="#ffffff", width=1)),
             )
-            figure.update_layout(
-                height=410,
-                title=dict(text=status, x=0.5, xanchor="center"),
-                margin=dict(l=10, r=10, t=55, b=10),
-                xaxis=dict(visible=False),
-            )
-            return figure
-
-        failed_col, blocked_col = st.columns(2)
-        with failed_col:
-            st.plotly_chart(
-                build_aging_funnel("Fallido", STATUS_COLORS["Fallido"]),
-                use_container_width=True,
-            )
-        with blocked_col:
-            st.plotly_chart(
-                build_aging_funnel("Bloqueado", STATUS_COLORS["Bloqueado"]),
-                use_container_width=True,
-            )
+        )
+        aging_funnel.update_layout(
+            height=450,
+            funnelmode="stack",
+            legend_title_text="Caso vinculado",
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="center",
+                x=0.5,
+            ),
+            margin=dict(l=10, r=10, t=55, b=10),
+            xaxis=dict(visible=False),
+        )
+        st.plotly_chart(aging_funnel, use_container_width=True)
         st.caption(
-            "El ancho representa el avance del añejamiento; "
-            "las etiquetas muestran la cantidad real de defectos."
+            "El ancho representa el avance del añejamiento y cada nivel mezcla "
+            "los defectos de casos fallidos y bloqueados. Las cifras muestran "
+            "la cantidad real de defectos."
         )
         st.caption(
             f"Fecha de referencia: {reference_date:%d/%m/%Y}. "
