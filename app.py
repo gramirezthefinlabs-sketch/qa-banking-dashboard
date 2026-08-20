@@ -1,9 +1,11 @@
+from math import sqrt
 from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+from scipy.stats import chi2_contingency
 
 
 st.set_page_config(
@@ -421,6 +423,124 @@ with tab_risk:
             },
         )
 
+
+    st.markdown("#### Asociación del riesgo con prioridad o ambiente")
+    analysis_variable = st.selectbox(
+        "Variable para analizar",
+        ["Prioridad", "Ambiente"],
+        key="risk_association_variable",
+    )
+    analysis_column = {
+        "Prioridad": "prioridad",
+        "Ambiente": "ambiente",
+    }[analysis_variable]
+    risk_records = filtered[filtered["defecto_id"].notna()].copy()
+
+    if risk_records.empty:
+        st.info("No existen defectos para realizar el análisis de asociación.")
+    else:
+        contingency = pd.crosstab(
+            risk_records[analysis_column],
+            risk_records["severidad_defecto"],
+        )
+        severity_order = ["Crítica", "Alta", "Media", "Baja"]
+        contingency = contingency.reindex(
+            columns=severity_order,
+            fill_value=0,
+        )
+        if analysis_variable == "Prioridad":
+            contingency = contingency.reindex(
+                list(PRIORITY_LABELS.values()),
+                fill_value=0,
+            )
+        else:
+            contingency = contingency.sort_index()
+
+        contingency = contingency.loc[
+            contingency.sum(axis=1) > 0,
+            contingency.sum(axis=0) > 0,
+        ]
+        heatmap_values = (
+            contingency.div(contingency.sum(axis=1), axis=0) * 100
+        ).round(1)
+        association_heatmap = px.imshow(
+            heatmap_values,
+            text_auto=".1f",
+            aspect="auto",
+            color_continuous_scale="YlOrRd",
+            labels={
+                "x": "Severidad del defecto",
+                "y": analysis_variable,
+                "color": "Distribución %",
+            },
+        )
+        association_heatmap.update_traces(
+            texttemplate="%{z:.1f}%",
+            hovertemplate=(
+                f"<b>{analysis_variable}: %{{y}}</b><br>"
+                "Severidad: %{x}<br>Distribución: %{z:.1f}%"
+                "<extra></extra>"
+            ),
+        )
+        association_heatmap.update_layout(
+            height=360,
+            margin=dict(l=10, r=10, t=10, b=10),
+        )
+        st.plotly_chart(association_heatmap, use_container_width=True)
+
+        if contingency.shape[0] >= 2 and contingency.shape[1] >= 2:
+            chi2_value, p_value, degrees_freedom, _ = chi2_contingency(
+                contingency
+            )
+            observations = contingency.to_numpy().sum()
+            minimum_dimension = min(
+                contingency.shape[0] - 1,
+                contingency.shape[1] - 1,
+            )
+            cramers_v = (
+                sqrt(chi2_value / (observations * minimum_dimension))
+                if observations and minimum_dimension
+                else 0.0
+            )
+            if cramers_v < 0.10:
+                association_strength = "muy débil"
+            elif cramers_v < 0.30:
+                association_strength = "débil"
+            elif cramers_v < 0.50:
+                association_strength = "moderada"
+            else:
+                association_strength = "fuerte"
+
+            chi_col, p_col, v_col = st.columns(3)
+            with chi_col:
+                st.metric("Chi-cuadrada", f"{chi2_value:.2f}")
+            with p_col:
+                st.metric("Valor p", f"{p_value:.4f}")
+            with v_col:
+                st.metric("V de Cramér", f"{cramers_v:.3f}")
+
+            if p_value < 0.05:
+                st.success(
+                    f"Existe una asociación estadísticamente significativa "
+                    f"entre severidad y {analysis_variable.lower()} "
+                    f"(p < 0.05). La fuerza es {association_strength}."
+                )
+            else:
+                st.info(
+                    f"No se encontró una asociación estadísticamente "
+                    f"significativa entre severidad y "
+                    f"{analysis_variable.lower()} (p ≥ 0.05)."
+                )
+            st.caption(
+                f"Prueba Chi-cuadrada con {degrees_freedom} grados de libertad. "
+                "La V de Cramér mide la fuerza de asociación entre variables "
+                "categóricas."
+            )
+        else:
+            st.warning(
+                "Se requieren al menos dos categorías por variable para "
+                "calcular Chi-cuadrada."
+            )
 
 
     a, b = st.columns(2)
