@@ -16,6 +16,11 @@ st.set_page_config(
 )
 
 DATA_PATH = Path(__file__).parent / "data" / "casos_prueba_banco_ficticio.csv"
+LOGO_PATH = Path(__file__).parent / "assets" / "finlabs_logo.png"
+BRAND_BLUE = "#0B5D7A"
+BRAND_DARK_BLUE = "#083B55"
+BRAND_YELLOW = "#F4B223"
+BRAND_LIGHT_BLUE = "#F3F8FB"
 STATUS_COLORS = {
     "Aprobado": "#16a34a",
     "Fallido": "#dc2626",
@@ -47,16 +52,23 @@ def metric_card(label: str, value: str, help_text: str) -> None:
 st.markdown(
     """
     <style>
-    .stApp {background: #f5f7fb;}
-    [data-testid="stSidebar"] {background: #102a43;}
+    .stApp {background: #F3F8FB;}
+    [data-testid="stSidebar"] {background: #083B55;}
     [data-testid="stSidebar"] * {color: #ffffff;}
+    [data-testid="stSidebar"] h1 {color: #F4B223;}
     [data-testid="stMetric"] {
-        background: white; border: 1px solid #dbe4ee; border-radius: 12px;
-        padding: 14px 16px; box-shadow: 0 2px 8px rgba(16,42,67,.06);
+        background: white; border: 1px solid #D6E5EC; border-top: 3px solid #F4B223;
+        border-radius: 12px; padding: 14px 16px;
+        box-shadow: 0 2px 8px rgba(8,59,85,.08);
+    }
+    [data-testid="stMetricValue"] {color: #0B5D7A;}
+    h1, h2, h3, h4 {color: #083B55;}
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #0B5D7A; border-bottom-color: #F4B223;
     }
     .block-container {padding-top: 1.7rem; padding-bottom: 2rem;}
     .dashboard-note {
-        border-left: 4px solid #1f8a8a; background: #eaf7f7; color: #123;
+        border-left: 4px solid #F4B223; background: #FFF7DF; color: #083B55;
         padding: .7rem 1rem; border-radius: 6px; margin-bottom: 1rem;
     }
     </style>
@@ -94,8 +106,12 @@ filtered = df[
     & df["fecha_ejecucion"].dt.date.between(start_date, end_date)
 ].copy()
 
-st.title("QA Banking Dashboard")
-st.subheader("Control de casos de prueba del banco ficticio NovaBank")
+title_col, logo_col = st.columns([4, 1])
+with title_col:
+    st.title("QA Banking Dashboard")
+    st.subheader("Control de casos de prueba del banco ficticio NovaBank")
+with logo_col:
+    st.image(LOGO_PATH, width=250)
 st.markdown(
     '<div class="dashboard-note">Panel académico con datos simulados. No contiene información real de clientes ni del banco.</div>',
     unsafe_allow_html=True,
@@ -195,7 +211,7 @@ with tab_summary:
             markers=True,
         )
         execution_chart.update_traces(
-            line_color="#2457a7",
+            line_color=BRAND_BLUE,
             hovertemplate=(
                 "<b>%{x|%d/%m/%Y}</b><br>"
                 "Casos ejecutados: %{y}<extra></extra>"
@@ -204,7 +220,7 @@ with tab_summary:
         execution_chart.add_hline(
             y=daily_average,
             line_dash="dash",
-            line_color="#f59e0b",
+            line_color=BRAND_YELLOW,
             line_width=2,
             annotation_text=f"Media: {daily_average:.1f}",
             annotation_position="top left",
@@ -482,7 +498,11 @@ with tab_risk:
             heatmap_values,
             text_auto=".1f",
             aspect="auto",
-            color_continuous_scale="YlOrRd",
+            color_continuous_scale=[
+                [0.0, "#EAF4F8"],
+                [0.5, "#6FA9BD"],
+                [1.0, "#F4B223"],
+            ],
             labels={
                 "x": "Severidad del defecto",
                 "y": analysis_variable,
