@@ -179,11 +179,15 @@ with tab_summary:
         )
         st.plotly_chart(status_chart, use_container_width=True)
     with right:
-        st.markdown("#### Ejecución acumulada por fecha")
+        st.markdown("#### Ejecución diaria y línea media")
         daily = (
-            executed.groupby("fecha_ejecucion").size().rename("Ejecutados").sort_index().cumsum()
+            executed.groupby("fecha_ejecucion")
+            .size()
+            .rename("Ejecutados")
+            .sort_index()
             .reset_index()
         )
+        daily_average = daily["Ejecutados"].mean()
         execution_chart = px.line(
             daily,
             x="fecha_ejecucion",
@@ -192,12 +196,23 @@ with tab_summary:
         )
         execution_chart.update_traces(
             line_color="#2457a7",
-            hovertemplate="<b>%{x|%d/%m/%Y}</b><br>Ejecutados: %{y}<extra></extra>",
+            hovertemplate=(
+                "<b>%{x|%d/%m/%Y}</b><br>"
+                "Casos ejecutados: %{y}<extra></extra>"
+            ),
+        )
+        execution_chart.add_hline(
+            y=daily_average,
+            line_dash="dash",
+            line_color="#f59e0b",
+            line_width=2,
+            annotation_text=f"Media: {daily_average:.1f}",
+            annotation_position="top left",
         )
         execution_chart.update_layout(
             height=340,
             xaxis_title="Fecha",
-            yaxis_title="Casos ejecutados acumulados",
+            yaxis_title="Casos ejecutados por día",
             margin=dict(l=10, r=10, t=10, b=10),
         )
         st.plotly_chart(execution_chart, use_container_width=True)
