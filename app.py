@@ -352,6 +352,14 @@ with tab_risk:
             .nunique()
             .reset_index(name="Casos")
         )
+        defect_summary = (
+            defect_aging.groupby(
+                ["Rango de añejamiento", "estado"],
+                observed=True,
+            )["defecto_id"]
+            .nunique()
+            .reset_index(name="Defectos")
+        )
         funnel_width = [100, 75, 50, 25]
         failed_counts = (
             aging_summary[aging_summary["estado"] == "Fallido"]
@@ -363,6 +371,20 @@ with tab_risk:
         blocked_counts = (
             aging_summary[aging_summary["estado"] == "Bloqueado"]
             .set_index("Rango de añejamiento")["Casos"]
+            .reindex(aging_order, fill_value=0)
+            .astype(int)
+            .tolist()
+        )
+        failed_defect_counts = (
+            defect_summary[defect_summary["estado"] == "Fallido"]
+            .set_index("Rango de añejamiento")["Defectos"]
+            .reindex(aging_order, fill_value=0)
+            .astype(int)
+            .tolist()
+        )
+        blocked_defect_counts = (
+            defect_summary[defect_summary["estado"] == "Bloqueado"]
+            .set_index("Rango de añejamiento")["Defectos"]
             .reindex(aging_order, fill_value=0)
             .astype(int)
             .tolist()
@@ -394,10 +416,11 @@ with tab_risk:
                 name="Fallido",
                 y=aging_order,
                 x=failed_width,
-                customdata=failed_counts,
-                texttemplate="<b>%{customdata}</b>",
+                customdata=list(zip(failed_counts, failed_defect_counts)),
+                texttemplate="<b>%{customdata[0]}</b>",
                 hovertemplate=(
-                    "<b>%{y}</b><br>Casos fallidos: %{customdata}"
+                    "<b>%{y}</b><br>Casos fallidos: %{customdata[0]}<br>"
+                    "Tickets de defecto: %{customdata[1]}"
                     "<extra></extra>"
                 ),
                 marker=dict(color=STATUS_COLORS["Fallido"]),
@@ -409,10 +432,11 @@ with tab_risk:
                 name="Bloqueado",
                 y=aging_order,
                 x=blocked_width,
-                customdata=blocked_counts,
-                texttemplate="<b>%{customdata}</b>",
+                customdata=list(zip(blocked_counts, blocked_defect_counts)),
+                texttemplate="<b>%{customdata[0]}</b>",
                 hovertemplate=(
-                    "<b>%{y}</b><br>Casos bloqueados: %{customdata}"
+                    "<b>%{y}</b><br>Casos bloqueados: %{customdata[0]}<br>"
+                    "Tickets de defecto: %{customdata[1]}"
                     "<extra></extra>"
                 ),
                 marker=dict(color=STATUS_COLORS["Bloqueado"]),
