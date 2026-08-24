@@ -347,8 +347,10 @@ with tab_summary:
         "3-Media": "#5B93A8",
         "4-Baja": "#A9CBD8",
     }
+    attention_statuses = ["Fallido", "Bloqueado", "No ejecutado"]
     status_priority = (
-        filtered.groupby(["estado", "prioridad"], observed=True)
+        filtered[filtered["estado"].isin(attention_statuses)]
+        .groupby(["estado", "prioridad"], observed=True)
         .size()
         .reset_index(name="Casos")
     )
@@ -359,7 +361,7 @@ with tab_summary:
         color="prioridad",
         barmode="group",
         text="Casos",
-        category_orders={"estado": ordered, "prioridad": priority_order},
+        category_orders={"estado": attention_statuses, "prioridad": priority_order},
         color_discrete_map=priority_colors,
         labels={"estado": "Estado", "prioridad": "Prioridad"},
     )
