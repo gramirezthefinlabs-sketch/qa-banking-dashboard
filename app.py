@@ -258,72 +258,46 @@ with tab_summary:
     with left:
         st.markdown("#### Distribución por estado")
         ordered = list(STATUS_COLORS)
-        priority_colors = {
-            "1-Crítica": "#F4B223",
-            "2-Alta": "#0B5D7A",
-            "3-Media": "#5B93A8",
-            "4-Baja": "#A9CBD8",
-        }
-        distribution = (
-            filtered.groupby(["estado", "prioridad"], observed=True)
-            .size()
+        status_counts = (
+            filtered["estado"]
+            .value_counts()
+            .reindex(ordered, fill_value=0)
+            .rename_axis("Estado")
             .reset_index(name="Casos")
         )
-        labels = [f"{total} casos"]
-        ids = ["Total"]
-        parents = [""]
-        values = [total]
-        colors = ["#FFFFFF"]
-        hover_data = [["Todos", "Todas"]]
-
-        for status in ordered:
-            status_rows = distribution[distribution["estado"] == status]
-            status_total = int(status_rows["Casos"].sum())
-            if not status_total:
-                continue
-            labels.append(status)
-            ids.append(status)
-            parents.append("Total")
-            values.append(status_total)
-            colors.append(STATUS_COLORS[status])
-            hover_data.append([status, "Todas"])
-
-            for priority in PRIORITY_LABELS.values():
-                priority_count = int(
-                    status_rows.loc[status_rows["prioridad"] == priority, "Casos"].sum()
-                )
-                if not priority_count:
-                    continue
-                labels.append(priority)
-                ids.append(f"{status}|{priority}")
-                parents.append(status)
-                values.append(priority_count)
-                colors.append(priority_colors[priority])
-                hover_data.append([status, priority])
-
-        status_chart = go.Figure(
-            go.Sunburst(
-                labels=labels,
-                ids=ids,
-                parents=parents,
-                values=values,
-                branchvalues="total",
-                marker=dict(colors=colors, line=dict(color="white", width=2)),
-                customdata=hover_data,
-            )
+        status_counts["Estado"] = pd.Categorical(
+            status_counts["Estado"], categories=ordered, ordered=True
+        )
+        status_counts = status_counts.sort_values("Estado")
+        status_chart = px.pie(
+            status_counts,
+            names="Estado",
+            values="Casos",
+            color="Estado",
+            hole=0.45,
+            color_discrete_map=STATUS_COLORS,
         )
         status_chart.update_traces(
-            textinfo="label+percent parent",
-            insidetextorientation="radial",
+            textinfo="label+percent",
+            textposition="outside",
             hovertemplate=(
-                "<b>%{label}</b><br>Estado: %{customdata[0]}<br>"
-                "Prioridad: %{customdata[1]}<br>Casos: %{value}<br>"
-                "Participación en el nivel: %{percentParent:.1%}<extra></extra>"
+                "<b>%{label}</b><br>Casos: %{value}<br>"
+                "Participación: %{percent}<extra></extra>"
             ),
         )
         status_chart.update_layout(
-            height=390,
+            height=340,
+            legend_title_text=None,
             margin=dict(l=10, r=10, t=10, b=10),
+            annotations=[
+                dict(
+                    text=f"<b>{int(status_counts['Casos'].sum())}</b><br>casos",
+                    x=0.5,
+                    y=0.5,
+                    font_size=18,
+                    showarrow=False,
+                )
+            ],
         )
         st.plotly_chart(status_chart, use_container_width=True)
     with right:
@@ -364,6 +338,46 @@ with tab_summary:
             margin=dict(l=10, r=10, t=10, b=10),
         )
         st.plotly_chart(execution_chart, use_container_width=True)
+
+    st.markdown("#### Estado de los casos por prioridad")
+    priority_order = list(PRIORITY_LABELS.values())
+    priority_colors = {
+        "1-Crítica": "#F4B223",
+        "2-Alta": "#0B5D7A",
+        "3-Media": "#5B93A8",
+        "4-Baja": "#A9CBD8",
+    }
+    status_priority = (
+        filtered.groupby(["estado", "prioridad"], observed=True)
+        .size()
+        .reset_index(name="Casos")
+    )
+    status_priority_chart = px.bar(
+        status_priority,
+        x="estado",
+        y="Casos",
+        color="prioridad",
+        barmode="group",
+        text="Casos",
+        category_orders={"estado": ordered, "prioridad": priority_order},
+        color_discrete_map=priority_colors,
+        labels={"estado": "Estado", "prioridad": "Prioridad"},
+    )
+    status_priority_chart.update_traces(
+        textposition="outside",
+        hovertemplate=(
+            "<b>%{x}</b><br>Prioridad: %{fullData.name}<br>"
+            "Casos: %{y}<extra></extra>"
+        ),
+    )
+    status_priority_chart.update_layout(
+        height=390,
+        xaxis_title="Estado del caso",
+        yaxis_title="Cantidad de casos",
+        legend_title_text="Prioridad",
+        margin=dict(l=10, r=10, t=10, b=10),
+    )
+    st.plotly_chart(status_priority_chart, use_container_width=True)
 
     st.markdown("#### Distribución de resultados por módulo (%)")
     ordered = list(STATUS_COLORS)
