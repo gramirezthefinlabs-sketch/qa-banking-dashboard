@@ -66,14 +66,18 @@ st.markdown(
     [data-testid="stSidebar"] input {color: #ffffff !important;}
     [data-testid="stSidebar"] [data-baseweb="select"] svg,
     [data-testid="stSidebar"] [data-baseweb="tag"] svg {fill: #F4B223;}
-    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] {
+    [data-testid="stSidebar"] .st-key-module_filter [data-tag] {
         background: #F4B223 !important; border-color: #F4B223 !important;
+        color: #083B55 !important;
     }
-    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] span {
+    [data-testid="stSidebar"] .st-key-module_filter [data-tag] span {
         color: #083B55 !important; font-weight: 600;
     }
-    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] svg {
-        fill: #083B55 !important;
+    [data-testid="stSidebar"] .st-key-module_filter [data-tag] button {
+        color: #083B55 !important;
+    }
+    [data-testid="stSidebar"] .st-key-module_filter [data-tag] svg {
+        fill: #083B55 !important; stroke: #083B55 !important;
     }
     .gjemar-logo {
         background: #ffffff; border-radius: 10px; padding: 12px;
