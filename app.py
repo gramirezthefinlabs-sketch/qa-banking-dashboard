@@ -352,13 +352,19 @@ with tab_risk:
             .nunique()
             .reset_index(name="Casos")
         )
-        defect_summary = (
+        defect_references = (
             defect_aging.groupby(
                 ["Rango de añejamiento", "estado"],
                 observed=True,
             )["defecto_id"]
-            .nunique()
-            .reset_index(name="Defectos")
+            .agg(
+                lambda values: "<br>".join(
+                    ", ".join(references[index:index + 4])
+                    for references in [sorted(set(values))]
+                    for index in range(0, len(references), 4)
+                )
+            )
+            .reset_index(name="Tickets")
         )
         funnel_width = [100, 75, 50, 25]
         failed_counts = (
@@ -375,18 +381,16 @@ with tab_risk:
             .astype(int)
             .tolist()
         )
-        failed_defect_counts = (
-            defect_summary[defect_summary["estado"] == "Fallido"]
-            .set_index("Rango de añejamiento")["Defectos"]
-            .reindex(aging_order, fill_value=0)
-            .astype(int)
+        failed_defect_references = (
+            defect_references[defect_references["estado"] == "Fallido"]
+            .set_index("Rango de añejamiento")["Tickets"]
+            .reindex(aging_order, fill_value="Sin tickets")
             .tolist()
         )
-        blocked_defect_counts = (
-            defect_summary[defect_summary["estado"] == "Bloqueado"]
-            .set_index("Rango de añejamiento")["Defectos"]
-            .reindex(aging_order, fill_value=0)
-            .astype(int)
+        blocked_defect_references = (
+            defect_references[defect_references["estado"] == "Bloqueado"]
+            .set_index("Rango de añejamiento")["Tickets"]
+            .reindex(aging_order, fill_value="Sin tickets")
             .tolist()
         )
         stage_totals = [
@@ -416,11 +420,11 @@ with tab_risk:
                 name="Fallido",
                 y=aging_order,
                 x=failed_width,
-                customdata=list(zip(failed_counts, failed_defect_counts)),
+                customdata=list(zip(failed_counts, failed_defect_references)),
                 texttemplate="<b>%{customdata[0]}</b>",
                 hovertemplate=(
                     "<b>%{y}</b><br>Casos fallidos: %{customdata[0]}<br>"
-                    "Tickets de defecto: %{customdata[1]}"
+                    "Defectos vinculados:<br>%{customdata[1]}"
                     "<extra></extra>"
                 ),
                 marker=dict(color=STATUS_COLORS["Fallido"]),
@@ -432,11 +436,11 @@ with tab_risk:
                 name="Bloqueado",
                 y=aging_order,
                 x=blocked_width,
-                customdata=list(zip(blocked_counts, blocked_defect_counts)),
+                customdata=list(zip(blocked_counts, blocked_defect_references)),
                 texttemplate="<b>%{customdata[0]}</b>",
                 hovertemplate=(
                     "<b>%{y}</b><br>Casos bloqueados: %{customdata[0]}<br>"
-                    "Tickets de defecto: %{customdata[1]}"
+                    "Defectos vinculados:<br>%{customdata[1]}"
                     "<extra></extra>"
                 ),
                 marker=dict(color=STATUS_COLORS["Bloqueado"]),
