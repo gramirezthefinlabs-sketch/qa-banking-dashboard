@@ -227,9 +227,9 @@ critical_defects = int((filtered["severidad_defecto"] == "Crítica").sum())
 execution_rate = len(executed) / total if total else 0
 pass_rate = approved / len(executed) if len(executed) else 0
 evidence_rate = (executed["evidencia"] == "Sí").mean() if len(executed) else 0
-attention_rate = (failed + blocked) / total if total else 0
+attention_rate = (failed + blocked) / len(executed) if len(executed) else 0
 unique_defects = filtered["defecto_id"].dropna().nunique()
-defect_rate = unique_defects / total if total else 0
+defect_rate = unique_defects / len(executed) if len(executed) else 0
 
 row1 = st.columns(5)
 with row1[0]:
@@ -242,13 +242,13 @@ with row1[3]:
     metric_card(
         "Tasa de fallidos y bloqueados",
         f"{attention_rate:.1%}",
-        "Casos fallidos y bloqueados / casos filtrados",
+        "Casos fallidos y bloqueados / casos ejecutados",
     )
 with row1[4]:
     metric_card(
         "Tasa de defectos",
         f"{defect_rate:.1%}",
-        "Tickets de defecto únicos / casos filtrados",
+        "Tickets de defecto únicos / casos ejecutados",
     )
 
 tab_summary, tab_risk, tab_detail = st.tabs(["📊 Resumen ejecutivo", "⚠️ Riesgo y cobertura", "📋 Detalle de casos"])
