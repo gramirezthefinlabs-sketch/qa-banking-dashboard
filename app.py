@@ -326,7 +326,7 @@ with tab_summary:
     st.plotly_chart(module_chart, use_container_width=True)
 
 with tab_risk:
-    st.markdown("#### Añejamiento de defectos vinculados a casos fallidos y bloqueados")
+    st.markdown("#### Añejamiento de casos fallidos y bloqueados vinculados a defectos")
     defect_aging = filtered[
         filtered["estado"].isin(["Fallido", "Bloqueado"])
         & filtered["defecto_id"].notna()
@@ -348,21 +348,21 @@ with tab_risk:
             defect_aging.groupby(
                 ["Rango de añejamiento", "estado"],
                 observed=True,
-            )["defecto_id"]
+            )["caso_id"]
             .nunique()
-            .reset_index(name="Defectos")
+            .reset_index(name="Casos")
         )
         funnel_width = [100, 75, 50, 25]
         failed_counts = (
             aging_summary[aging_summary["estado"] == "Fallido"]
-            .set_index("Rango de añejamiento")["Defectos"]
+            .set_index("Rango de añejamiento")["Casos"]
             .reindex(aging_order, fill_value=0)
             .astype(int)
             .tolist()
         )
         blocked_counts = (
             aging_summary[aging_summary["estado"] == "Bloqueado"]
-            .set_index("Rango de añejamiento")["Defectos"]
+            .set_index("Rango de añejamiento")["Casos"]
             .reindex(aging_order, fill_value=0)
             .astype(int)
             .tolist()
@@ -436,8 +436,8 @@ with tab_risk:
         st.plotly_chart(aging_funnel, use_container_width=True)
         st.caption(
             "El ancho representa el avance del añejamiento y cada nivel mezcla "
-            "los defectos de casos fallidos y bloqueados. Las cifras muestran "
-            "la cantidad real de defectos."
+            "los casos fallidos y bloqueados vinculados a defectos. Las cifras "
+            "muestran la cantidad real de casos de prueba."
         )
         st.caption(
             f"Fecha de referencia: {reference_date:%d/%m/%Y}. "
@@ -470,7 +470,6 @@ with tab_risk:
                     "fecha_ejecucion",
                 ]
             ]
-            .drop_duplicates(subset=["defecto_id"])
             .sort_values(
                 ["Días de antigüedad", "defecto_id"],
                 ascending=[False, True],
