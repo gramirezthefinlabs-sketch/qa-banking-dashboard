@@ -13,10 +13,25 @@ Dashboard interactivo para analizar casos de prueba de **NovaBank**, un banco co
 
 ## Ejecutar localmente
 
+### Opción corta
+
+Utiliza estos comandos cuando el sistema reconoce directamente `pip` y `streamlit`:
+
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
+
+### Opción recomendada para GitHub Codespaces
+
+Si aparece `streamlit: command not found`, ejecuta Streamlit mediante Python 3:
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 -m streamlit run app.py
+```
+
+> **Importante:** no omitas `-r`. Esta opción indica que `pip` debe leer e instalar las librerías declaradas en `requirements.txt`.
 
 ## Estructura
 
