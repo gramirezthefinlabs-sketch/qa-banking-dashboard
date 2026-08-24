@@ -1,421 +1,421 @@
 caso_id,nombre_caso,modulo,subproceso,tipo_prueba,prioridad,estado,severidad_defecto,defecto_id,ambiente,release,tester,fecha_ejecucion,duracion_min,evidencia,automatizado
-TC-0001,Validar cuotas - escenario 001,Préstamos,Pagos,COB/EOD,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-15,48,Sí,Sí
-TC-0002,Validar pagos - escenario 002,Préstamos,Reversos,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-01,59,Sí,Sí
-TC-0003,Validar internas - escenario 003,Transferencias,Interbancarias,COB/EOD,Media,Fallido,Alta,DEF-1003,QA,R25,Carlos,2026-08-09,27,Sí,Sí
-TC-0004,Validar desembolso - escenario 004,Préstamos,Desembolso,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-16,64,Sí,No
-TC-0005,Validar apertura - escenario 005,Cuentas,Apertura,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-25,74,Sí,No
-TC-0006,Validar interbancarias - escenario 006,Transferencias,Límites,API,Media,Fallido,Media,DEF-1006,UAT,R25,Ana,2026-07-02,18,Sí,No
-TC-0007,Validar cargos - escenario 007,Cuentas,Cierre,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-07,64,Sí,No
-TC-0008,Validar cargos - escenario 008,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-21,55,Sí,Sí
-TC-0009,Validar pagos - escenario 009,Tarjetas,Pagos,API,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-25,27,Sí,No
-TC-0010,Validar pagos - escenario 010,Tarjetas,Bloqueo,Regresión,Crítica,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-20,25,Sí,No
-TC-0011,Validar cargos - escenario 011,Cuentas,Mantenimiento,COB/EOD,Media,Fallido,Crítica,DEF-1011,SIT,R25,Elena,2026-07-08,69,No,No
-TC-0012,Validar consumos - escenario 012,Tarjetas,Consumos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-13,34,Sí,No
-TC-0013,Validar actualización - escenario 013,Clientes,Creación,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-08-13,52,Sí,No
-TC-0014,Validar consumos - escenario 014,Tarjetas,Emisión,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-12,58,Sí,No
-TC-0015,Validar mantenimiento - escenario 015,Cuentas,Cargos,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-19,36,Sí,Sí
-TC-0016,Validar reversos - escenario 016,Transferencias,Reversos,API,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-04,38,Sí,No
-TC-0017,Validar debida diligencia - escenario 017,Clientes,Debida diligencia,Seguridad,Alta,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-07,0,No,Sí
-TC-0018,Validar bloqueo - escenario 018,Clientes,Creación,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-14,54,Sí,Sí
-TC-0019,Validar consumos - escenario 019,Tarjetas,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-10,55,Sí,No
-TC-0020,Validar pagos - escenario 020,Préstamos,Reversos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-10,21,Sí,No
-TC-0021,Validar bloqueo - escenario 021,Clientes,Creación,Funcional,Media,Fallido,Baja,DEF-1021,QA,R25,Miguel,2026-07-22,55,No,Sí
-TC-0022,Validar reversos - escenario 022,Préstamos,Desembolso,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Ana,2026-07-14,0,No,No
-TC-0023,Validar interbancarias - escenario 023,Transferencias,Interbancarias,API,Media,Fallido,Media,DEF-1006,SIT,R25,Laura,2026-07-20,72,Sí,No
-TC-0024,Validar reversos - escenario 024,Pagos,LBTR,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-07-27,37,Sí,No
-TC-0025,Validar reversos - escenario 025,Transferencias,Interbancarias,Funcional,Baja,Bloqueado,Alta,DEF-1025,SIT,R25,Laura,2026-08-01,39,No,Sí
-TC-0026,Validar reversos - escenario 026,Transferencias,Internas,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-12,57,No,No
-TC-0027,Validar cargos - escenario 027,Cuentas,Cargos,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-03,69,Sí,No
-TC-0028,Validar internas - escenario 028,Transferencias,Reversos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-17,45,Sí,No
-TC-0029,Validar ach - escenario 029,Pagos,ACH,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-25,19,Sí,Sí
-TC-0030,Validar reversos - escenario 030,Préstamos,Reversos,COB/EOD,Crítica,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-01,12,Sí,No
-TC-0031,Validar ach - escenario 031,Pagos,LBTR,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-26,0,No,No
-TC-0032,Validar ach - escenario 032,Pagos,LBTR,API,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,49,Sí,Sí
-TC-0033,Validar cuotas - escenario 033,Préstamos,Pagos,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-26,0,No,No
-TC-0034,Validar pago de servicios - escenario 034,Pagos,Reversos,API,Alta,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-10,0,No,No
-TC-0035,Validar emisión - escenario 035,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-13,23,Sí,No
-TC-0036,Validar consumos - escenario 036,Tarjetas,Consumos,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-17,0,No,No
-TC-0037,Validar creación - escenario 037,Clientes,Bloqueo,API,Alta,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-23,0,No,No
-TC-0038,Validar pago de servicios - escenario 038,Pagos,LBTR,Integración,Alta,Bloqueado,Media,DEF-1038,QA,R25,José,2026-07-13,21,Sí,No
-TC-0039,Validar bloqueo - escenario 039,Clientes,Creación,Regresión,Media,Bloqueado,Media,DEF-1039,SIT,R25,Miguel,2026-07-05,51,No,No
-TC-0040,Validar bloqueo - escenario 040,Tarjetas,Pagos,Regresión,Baja,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-08-09,0,No,Sí
-TC-0041,Validar cargos - escenario 041,Cuentas,Mantenimiento,Integración,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-15,42,Sí,Sí
-TC-0042,Validar internas - escenario 042,Transferencias,Límites,Integración,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-08-07,0,No,No
-TC-0043,Validar actualización - escenario 043,Clientes,Creación,Funcional,Alta,Fallido,Media,DEF-1043,UAT,R25,Ana,2026-08-12,49,Sí,No
-TC-0044,Validar cuotas - escenario 044,Préstamos,Cuotas,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-07,5,Sí,Sí
-TC-0045,Validar lbtr - escenario 045,Pagos,LBTR,Seguridad,Crítica,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-09,22,Sí,No
-TC-0046,Validar ach - escenario 046,Pagos,ACH,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-29,65,Sí,No
-TC-0047,Validar cuotas - escenario 047,Préstamos,Pagos,COB/EOD,Alta,Fallido,Alta,DEF-1047,QA,R25,Elena,2026-07-29,27,Sí,No
-TC-0048,Validar pago de servicios - escenario 048,Pagos,ACH,API,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-09,16,No,Sí
-TC-0049,Validar cargos - escenario 049,Cuentas,Mantenimiento,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-16,70,Sí,No
-TC-0050,Validar cierre - escenario 050,Cuentas,Cierre,Funcional,Alta,Fallido,Alta,DEF-1050,SIT,R25,Ana,2026-08-07,71,No,No
-TC-0051,Validar reversos - escenario 051,Pagos,LBTR,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-10,30,Sí,No
-TC-0052,Validar reversos - escenario 052,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-12,9,Sí,No
-TC-0053,Validar actualización - escenario 053,Clientes,Creación,API,Baja,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-07,15,Sí,No
-TC-0054,Validar mantenimiento - escenario 054,Cuentas,Cargos,Integración,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-23,40,Sí,No
-TC-0055,Validar cierre - escenario 055,Cuentas,Cargos,Integración,Media,Fallido,Baja,DEF-1055,UAT,R25,José,2026-07-28,57,Sí,No
-TC-0056,Validar creación - escenario 056,Clientes,Debida diligencia,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-02,50,Sí,Sí
-TC-0057,Validar interbancarias - escenario 057,Transferencias,Internas,API,Media,Fallido,Media,DEF-1006,UAT,R25,Elena,2026-08-13,14,Sí,No
-TC-0058,Validar cierre - escenario 058,Cuentas,Cargos,API,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-21,19,Sí,No
-TC-0059,Validar reversos - escenario 059,Pagos,Pago de servicios,Regresión,Media,Fallido,Alta,DEF-1059,SIT,R25,Laura,2026-07-24,50,Sí,Sí
-TC-0060,Validar cuotas - escenario 060,Préstamos,Desembolso,Funcional,Baja,Fallido,Baja,DEF-1060,SIT,R25,Ana,2026-08-07,37,Sí,No
-TC-0061,Validar reversos - escenario 061,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-12,69,Sí,Sí
-TC-0062,Validar debida diligencia - escenario 062,Clientes,Creación,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-26,70,Sí,No
-TC-0063,Validar internas - escenario 063,Transferencias,Internas,Regresión,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-06,13,Sí,No
-TC-0064,Validar límites - escenario 064,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-05,68,Sí,No
-TC-0065,Validar desembolso - escenario 065,Préstamos,Pagos,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-22,45,Sí,No
-TC-0066,Validar ach - escenario 066,Pagos,Reversos,COB/EOD,Alta,Bloqueado,Media,DEF-1038,QA,R25,Ana,2026-07-18,21,No,No
-TC-0067,Validar lbtr - escenario 067,Pagos,Pago de servicios,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-15,51,Sí,No
-TC-0068,Validar bloqueo - escenario 068,Tarjetas,Consumos,Funcional,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-09,41,No,No
-TC-0069,Validar cargos - escenario 069,Cuentas,Cierre,API,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,33,Sí,No
-TC-0070,Validar ach - escenario 070,Pagos,LBTR,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-29,7,Sí,No
-TC-0071,Validar mantenimiento - escenario 071,Cuentas,Apertura,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-08-13,58,Sí,Sí
-TC-0072,Validar pagos - escenario 072,Préstamos,Desembolso,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,55,No,No
-TC-0073,Validar reversos - escenario 073,Transferencias,Interbancarias,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-16,72,Sí,Sí
-TC-0074,Validar apertura - escenario 074,Cuentas,Cierre,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-22,4,Sí,No
-TC-0075,Validar pagos - escenario 075,Tarjetas,Bloqueo,Regresión,Alta,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-05,0,No,No
-TC-0076,Validar apertura - escenario 076,Cuentas,Cierre,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-09,67,Sí,No
-TC-0077,Validar lbtr - escenario 077,Pagos,LBTR,Funcional,Media,Fallido,Alta,DEF-1059,UAT,R25,Ana,2026-08-06,57,Sí,No
-TC-0078,Validar interbancarias - escenario 078,Transferencias,Reversos,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-03,16,Sí,No
-TC-0079,Validar límites - escenario 079,Transferencias,Interbancarias,Funcional,Media,Fallido,Alta,DEF-1003,SIT,R25,Elena,2026-07-12,14,Sí,No
-TC-0080,Validar límites - escenario 080,Transferencias,Internas,Seguridad,Crítica,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-19,0,No,No
-TC-0081,Validar internas - escenario 081,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-07-05,54,Sí,No
-TC-0082,Validar reversos - escenario 082,Transferencias,Interbancarias,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-14,20,Sí,No
-TC-0083,Validar actualización - escenario 083,Clientes,Debida diligencia,COB/EOD,Alta,Fallido,Baja,DEF-1021,UAT,R25,Carlos,2026-07-19,43,Sí,Sí
-TC-0084,Validar pago de servicios - escenario 084,Pagos,ACH,Seguridad,Alta,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-07-22,0,No,Sí
-TC-0085,Validar cuotas - escenario 085,Préstamos,Pagos,Regresión,Crítica,Bloqueado,Media,DEF-1085,QA,R25,Laura,2026-07-05,68,Sí,Sí
-TC-0086,Validar bloqueo - escenario 086,Clientes,Bloqueo,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-23,52,Sí,No
-TC-0087,Validar desembolso - escenario 087,Préstamos,Cuotas,Regresión,Alta,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-20,0,No,Sí
-TC-0088,Validar pago de servicios - escenario 088,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-01,25,Sí,No
-TC-0089,Validar creación - escenario 089,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-06,38,Sí,Sí
-TC-0090,Validar pagos - escenario 090,Tarjetas,Consumos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-30,8,Sí,Sí
-TC-0091,Validar cuotas - escenario 091,Préstamos,Reversos,Seguridad,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-27,65,Sí,Sí
-TC-0092,Validar apertura - escenario 092,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-17,35,No,Sí
-TC-0093,Validar cuotas - escenario 093,Préstamos,Cuotas,API,Alta,Bloqueado,Alta,DEF-1093,QA,R25,Carlos,2026-07-22,16,Sí,No
-TC-0094,Validar pagos - escenario 094,Préstamos,Reversos,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-10,58,Sí,No
-TC-0095,Validar consumos - escenario 095,Tarjetas,Pagos,Seguridad,Baja,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-08-07,0,No,No
-TC-0096,Validar emisión - escenario 096,Tarjetas,Emisión,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-22,25,Sí,No
-TC-0097,Validar consumos - escenario 097,Tarjetas,Pagos,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-15,18,Sí,No
-TC-0098,Validar cierre - escenario 098,Cuentas,Cierre,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-24,0,No,No
-TC-0099,Validar desembolso - escenario 099,Préstamos,Desembolso,Integración,Media,Fallido,Media,DEF-1099,QA,R25,Ana,2026-07-25,67,Sí,No
-TC-0100,Validar reversos - escenario 100,Préstamos,Cuotas,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-20,58,Sí,Sí
-TC-0101,Validar reversos - escenario 101,Préstamos,Pagos,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-08-16,13,Sí,No
-TC-0102,Validar apertura - escenario 102,Cuentas,Cierre,COB/EOD,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-23,0,No,Sí
-TC-0103,Validar desembolso - escenario 103,Préstamos,Pagos,Integración,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-01,11,Sí,No
-TC-0104,Validar cierre - escenario 104,Cuentas,Cierre,API,Media,Fallido,Baja,DEF-1055,QA,R25,José,2026-07-20,50,Sí,No
-TC-0105,Validar actualización - escenario 105,Clientes,Creación,COB/EOD,Media,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-22,0,No,No
-TC-0106,Validar pagos - escenario 106,Tarjetas,Emisión,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-09,65,Sí,Sí
-TC-0107,Validar cargos - escenario 107,Cuentas,Cierre,Funcional,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-09,50,Sí,Sí
-TC-0108,Validar actualización - escenario 108,Clientes,Debida diligencia,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-15,12,Sí,Sí
-TC-0109,Validar desembolso - escenario 109,Préstamos,Reversos,API,Media,Bloqueado,Alta,DEF-1093,QA,R25,Ana,2026-08-09,27,Sí,Sí
-TC-0110,Validar pagos - escenario 110,Tarjetas,Emisión,API,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-07-03,63,No,No
-TC-0111,Validar emisión - escenario 111,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-01,42,Sí,Sí
-TC-0112,Validar internas - escenario 112,Transferencias,Límites,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-06,39,No,No
-TC-0113,Validar internas - escenario 113,Transferencias,Interbancarias,Seguridad,Media,Bloqueado,Alta,DEF-1025,SIT,R25,Laura,2026-07-13,32,Sí,Sí
-TC-0114,Validar emisión - escenario 114,Tarjetas,Emisión,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-18,12,Sí,Sí
-TC-0115,Validar apertura - escenario 115,Cuentas,Cierre,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-02,65,No,Sí
-TC-0116,Validar interbancarias - escenario 116,Transferencias,Interbancarias,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,68,Sí,No
-TC-0117,Validar consumos - escenario 117,Tarjetas,Emisión,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-14,51,Sí,No
-TC-0118,Validar consumos - escenario 118,Tarjetas,Pagos,Integración,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-22,75,Sí,Sí
-TC-0119,Validar límites - escenario 119,Transferencias,Reversos,Funcional,Baja,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-28,0,No,No
-TC-0120,Validar reversos - escenario 120,Préstamos,Reversos,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-29,38,Sí,Sí
-TC-0121,Validar actualización - escenario 121,Clientes,Debida diligencia,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-13,5,Sí,No
-TC-0122,Validar reversos - escenario 122,Pagos,Pago de servicios,Seguridad,Alta,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-10,0,No,No
-TC-0123,Validar pago de servicios - escenario 123,Pagos,LBTR,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-17,72,Sí,Sí
-TC-0124,Validar mantenimiento - escenario 124,Cuentas,Mantenimiento,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Elena,2026-08-10,0,No,No
-TC-0125,Validar pagos - escenario 125,Préstamos,Desembolso,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-31,17,Sí,Sí
-TC-0126,Validar pago de servicios - escenario 126,Pagos,Pago de servicios,Funcional,Media,No ejecutado,Sin defecto,,SIT,R25,José,2026-07-20,0,No,No
-TC-0127,Validar interbancarias - escenario 127,Transferencias,Límites,Integración,Alta,Bloqueado,Alta,DEF-1025,UAT,R25,Laura,2026-08-04,45,Sí,Sí
-TC-0128,Validar pago de servicios - escenario 128,Pagos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-14,49,Sí,Sí
-TC-0129,Validar reversos - escenario 129,Pagos,Pago de servicios,API,Alta,Fallido,Media,DEF-1129,UAT,R25,José,2026-08-05,26,Sí,Sí
-TC-0130,Validar debida diligencia - escenario 130,Clientes,Bloqueo,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-02,29,Sí,Sí
-TC-0131,Validar pagos - escenario 131,Tarjetas,Bloqueo,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-08-13,0,No,No
-TC-0132,Validar bloqueo - escenario 132,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-28,31,Sí,No
-TC-0133,Validar cargos - escenario 133,Cuentas,Apertura,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-04,54,Sí,Sí
-TC-0134,Validar reversos - escenario 134,Transferencias,Reversos,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-28,12,Sí,No
-TC-0135,Validar cargos - escenario 135,Cuentas,Cargos,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-01,70,Sí,No
-TC-0136,Validar apertura - escenario 136,Cuentas,Apertura,Integración,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-20,74,Sí,Sí
-TC-0137,Validar límites - escenario 137,Transferencias,Internas,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-21,35,Sí,Sí
-TC-0138,Validar reversos - escenario 138,Pagos,LBTR,Integración,Alta,No ejecutado,Sin defecto,,QA,R25,Carlos,2026-07-11,0,No,No
-TC-0139,Validar pagos - escenario 139,Préstamos,Pagos,Funcional,Alta,Fallido,Alta,DEF-1047,UAT,R25,José,2026-07-19,9,Sí,No
-TC-0140,Validar desembolso - escenario 140,Préstamos,Desembolso,Integración,Baja,Bloqueado,Alta,DEF-1093,SIT,R25,Elena,2026-08-01,16,Sí,Sí
-TC-0141,Validar reversos - escenario 141,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-15,37,Sí,No
-TC-0142,Validar pagos - escenario 142,Préstamos,Cuotas,Seguridad,Media,Fallido,Media,DEF-1099,QA,R25,Laura,2026-08-06,25,Sí,Sí
-TC-0143,Validar internas - escenario 143,Transferencias,Límites,Regresión,Alta,Bloqueado,Alta,DEF-1143,UAT,R25,Elena,2026-07-14,18,Sí,Sí
-TC-0144,Validar bloqueo - escenario 144,Tarjetas,Bloqueo,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,José,2026-07-28,40,Sí,Sí
-TC-0145,Validar internas - escenario 145,Transferencias,Interbancarias,API,Alta,Fallido,Alta,DEF-1003,SIT,R25,Carlos,2026-07-01,31,Sí,No
-TC-0146,Validar bloqueo - escenario 146,Tarjetas,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-07-18,12,Sí,Sí
-TC-0147,Validar bloqueo - escenario 147,Clientes,Debida diligencia,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-24,27,No,No
-TC-0148,Validar cargos - escenario 148,Cuentas,Cargos,Funcional,Alta,Bloqueado,Alta,DEF-1148,UAT,R25,Laura,2026-08-16,23,Sí,No
-TC-0149,Validar creación - escenario 149,Clientes,Debida diligencia,Regresión,Crítica,No ejecutado,Sin defecto,,UAT,R25,José,2026-08-04,0,No,Sí
-TC-0150,Validar internas - escenario 150,Transferencias,Reversos,API,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-07-30,65,Sí,Sí
-TC-0151,Validar bloqueo - escenario 151,Tarjetas,Pagos,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,10,Sí,No
-TC-0152,Validar bloqueo - escenario 152,Clientes,Actualización,Regresión,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-08-14,61,No,Sí
-TC-0153,Validar consumos - escenario 153,Tarjetas,Consumos,API,Alta,No ejecutado,Sin defecto,,SIT,R25,Laura,2026-07-30,0,No,No
-TC-0154,Validar creación - escenario 154,Clientes,Creación,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-08,0,No,Sí
-TC-0155,Validar apertura - escenario 155,Cuentas,Cierre,Seguridad,Crítica,Aprobado,Sin defecto,,SIT,R25,José,2026-07-24,67,Sí,No
-TC-0156,Validar reversos - escenario 156,Transferencias,Límites,Seguridad,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-12,74,Sí,No
-TC-0157,Validar pago de servicios - escenario 157,Pagos,Reversos,API,Baja,Fallido,Alta,DEF-1059,UAT,R25,Miguel,2026-07-02,61,Sí,No
-TC-0158,Validar reversos - escenario 158,Transferencias,Interbancarias,Integración,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-12,28,Sí,No
-TC-0159,Validar creación - escenario 159,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-16,28,Sí,No
-TC-0160,Validar límites - escenario 160,Transferencias,Internas,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-01,0,No,No
-TC-0161,Validar límites - escenario 161,Transferencias,Interbancarias,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,38,Sí,No
-TC-0162,Validar bloqueo - escenario 162,Tarjetas,Consumos,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-07,28,Sí,No
-TC-0163,Validar debida diligencia - escenario 163,Clientes,Debida diligencia,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-16,63,Sí,No
-TC-0164,Validar actualización - escenario 164,Clientes,Bloqueo,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-11,14,Sí,No
-TC-0165,Validar debida diligencia - escenario 165,Clientes,Creación,API,Media,Bloqueado,Media,DEF-1039,SIT,R25,Carlos,2026-08-09,46,Sí,No
-TC-0166,Validar reversos - escenario 166,Préstamos,Cuotas,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-09,62,Sí,No
-TC-0167,Validar consumos - escenario 167,Tarjetas,Pagos,API,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-15,26,Sí,Sí
-TC-0168,Validar creación - escenario 168,Clientes,Actualización,API,Media,Fallido,Media,DEF-1043,QA,R25,Laura,2026-07-01,41,Sí,Sí
-TC-0169,Validar apertura - escenario 169,Cuentas,Apertura,Regresión,Baja,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-27,62,Sí,Sí
-TC-0170,Validar internas - escenario 170,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-04,43,Sí,No
-TC-0171,Validar cuotas - escenario 171,Préstamos,Desembolso,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-09,9,Sí,No
-TC-0172,Validar cuotas - escenario 172,Préstamos,Desembolso,API,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-31,49,Sí,No
-TC-0173,Validar internas - escenario 173,Transferencias,Reversos,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-21,41,Sí,Sí
-TC-0174,Validar reversos - escenario 174,Préstamos,Cuotas,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-01,53,Sí,No
-TC-0175,Validar creación - escenario 175,Clientes,Actualización,Funcional,Crítica,Bloqueado,Media,DEF-1039,QA,R25,José,2026-07-11,60,Sí,No
-TC-0176,Validar creación - escenario 176,Clientes,Actualización,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,42,Sí,Sí
-TC-0177,Validar bloqueo - escenario 177,Clientes,Actualización,API,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-03,26,Sí,Sí
-TC-0178,Validar cierre - escenario 178,Cuentas,Apertura,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-30,13,Sí,No
-TC-0179,Validar reversos - escenario 179,Préstamos,Reversos,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-18,36,Sí,Sí
-TC-0180,Validar pago de servicios - escenario 180,Pagos,LBTR,Seguridad,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-07,53,Sí,No
-TC-0181,Validar interbancarias - escenario 181,Transferencias,Reversos,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-28,0,No,Sí
-TC-0182,Validar internas - escenario 182,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-11,54,Sí,No
-TC-0183,Validar interbancarias - escenario 183,Transferencias,Límites,API,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-06,67,Sí,No
-TC-0184,Validar consumos - escenario 184,Tarjetas,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,68,Sí,Sí
-TC-0185,Validar límites - escenario 185,Transferencias,Interbancarias,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-21,68,Sí,No
-TC-0186,Validar reversos - escenario 186,Pagos,Pago de servicios,Regresión,Alta,Fallido,Alta,DEF-1186,SIT,R25,José,2026-07-31,68,Sí,Sí
-TC-0187,Validar creación - escenario 187,Clientes,Actualización,Integración,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-08,20,Sí,No
-TC-0188,Validar internas - escenario 188,Transferencias,Reversos,Funcional,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-12,6,Sí,No
-TC-0189,Validar mantenimiento - escenario 189,Cuentas,Cierre,API,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-30,14,Sí,Sí
-TC-0190,Validar reversos - escenario 190,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,27,Sí,No
-TC-0191,Validar consumos - escenario 191,Tarjetas,Pagos,Seguridad,Media,Fallido,Alta,DEF-1191,UAT,R25,Miguel,2026-07-25,26,Sí,Sí
-TC-0192,Validar reversos - escenario 192,Pagos,Pago de servicios,Regresión,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-08,55,Sí,No
-TC-0193,Validar ach - escenario 193,Pagos,ACH,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-09,44,Sí,Sí
-TC-0194,Validar consumos - escenario 194,Tarjetas,Consumos,COB/EOD,Alta,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-26,0,No,No
-TC-0195,Validar desembolso - escenario 195,Préstamos,Reversos,Seguridad,Media,Bloqueado,Media,DEF-1085,UAT,R25,José,2026-07-18,30,Sí,No
-TC-0196,Validar pago de servicios - escenario 196,Pagos,LBTR,Seguridad,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-05,32,Sí,No
-TC-0197,Validar límites - escenario 197,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-01,40,Sí,No
-TC-0198,Validar interbancarias - escenario 198,Transferencias,Interbancarias,Seguridad,Media,Fallido,Media,DEF-1198,QA,R25,Ana,2026-07-29,65,Sí,No
-TC-0199,Validar lbtr - escenario 199,Pagos,Pago de servicios,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-08-02,64,Sí,Sí
-TC-0200,Validar bloqueo - escenario 200,Clientes,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,67,Sí,No
-TC-0201,Validar pagos - escenario 201,Tarjetas,Emisión,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-01,36,Sí,No
-TC-0202,Validar ach - escenario 202,Pagos,Pago de servicios,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-17,34,Sí,Sí
-TC-0203,Validar emisión - escenario 203,Tarjetas,Consumos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-29,57,Sí,No
-TC-0204,Validar límites - escenario 204,Transferencias,Internas,API,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-07,49,Sí,No
-TC-0205,Validar pagos - escenario 205,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-20,33,Sí,No
-TC-0206,Validar debida diligencia - escenario 206,Clientes,Debida diligencia,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-25,60,Sí,No
-TC-0207,Validar bloqueo - escenario 207,Clientes,Bloqueo,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-03,0,No,No
-TC-0208,Validar mantenimiento - escenario 208,Cuentas,Cargos,Integración,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-08-11,0,No,No
-TC-0209,Validar cargos - escenario 209,Cuentas,Cierre,API,Alta,Fallido,Alta,DEF-1050,UAT,R25,Miguel,2026-07-09,31,Sí,No
-TC-0210,Validar creación - escenario 210,Clientes,Debida diligencia,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-17,68,Sí,No
-TC-0211,Validar cierre - escenario 211,Cuentas,Cargos,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-31,11,Sí,No
-TC-0212,Validar apertura - escenario 212,Cuentas,Cargos,Seguridad,Media,Fallido,Alta,DEF-1050,QA,R25,Elena,2026-07-29,46,Sí,Sí
-TC-0213,Validar consumos - escenario 213,Tarjetas,Emisión,API,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-14,59,Sí,No
-TC-0214,Validar internas - escenario 214,Transferencias,Límites,Funcional,Alta,Fallido,Media,DEF-1198,SIT,R25,José,2026-07-17,15,Sí,No
-TC-0215,Validar cuotas - escenario 215,Préstamos,Reversos,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-02,73,Sí,No
-TC-0216,Validar bloqueo - escenario 216,Clientes,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-21,36,Sí,No
-TC-0217,Validar consumos - escenario 217,Tarjetas,Bloqueo,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-02,38,Sí,No
-TC-0218,Validar cuotas - escenario 218,Préstamos,Desembolso,Integración,Baja,Fallido,Baja,DEF-1060,UAT,R25,Miguel,2026-08-07,46,Sí,No
-TC-0219,Validar cierre - escenario 219,Cuentas,Cargos,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-22,14,Sí,No
-TC-0220,Validar límites - escenario 220,Transferencias,Límites,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-13,23,No,Sí
-TC-0221,Validar emisión - escenario 221,Tarjetas,Consumos,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-03,61,Sí,No
-TC-0222,Validar creación - escenario 222,Clientes,Actualización,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-14,51,Sí,No
-TC-0223,Validar actualización - escenario 223,Clientes,Actualización,Regresión,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-18,0,No,No
-TC-0224,Validar pagos - escenario 224,Tarjetas,Bloqueo,Regresión,Baja,Bloqueado,Alta,DEF-1224,SIT,R25,Ana,2026-08-14,37,Sí,No
-TC-0225,Validar apertura - escenario 225,Cuentas,Cierre,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,13,Sí,Sí
-TC-0226,Validar reversos - escenario 226,Pagos,Pago de servicios,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-06,57,Sí,No
-TC-0227,Validar reversos - escenario 227,Pagos,LBTR,API,Alta,Bloqueado,Media,DEF-1038,UAT,R25,Miguel,2026-08-06,45,Sí,Sí
-TC-0228,Validar reversos - escenario 228,Préstamos,Desembolso,API,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-07,33,Sí,No
-TC-0229,Validar bloqueo - escenario 229,Clientes,Creación,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-03,10,Sí,Sí
-TC-0230,Validar cierre - escenario 230,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-07-12,20,Sí,No
-TC-0231,Validar pagos - escenario 231,Préstamos,Cuotas,Regresión,Media,Fallido,Media,DEF-1099,SIT,R25,José,2026-07-22,50,Sí,No
-TC-0232,Validar lbtr - escenario 232,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-17,6,Sí,No
-TC-0233,Validar lbtr - escenario 233,Pagos,LBTR,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-13,0,No,Sí
-TC-0234,Validar reversos - escenario 234,Pagos,LBTR,Seguridad,Baja,No ejecutado,Sin defecto,,QA,R25,Elena,2026-07-21,0,No,No
-TC-0235,Validar pagos - escenario 235,Tarjetas,Emisión,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-15,41,Sí,Sí
-TC-0236,Validar cuotas - escenario 236,Préstamos,Cuotas,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-08,22,Sí,Sí
-TC-0237,Validar apertura - escenario 237,Cuentas,Mantenimiento,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,66,Sí,No
-TC-0238,Validar mantenimiento - escenario 238,Cuentas,Mantenimiento,Integración,Crítica,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-04,0,No,No
-TC-0239,Validar pago de servicios - escenario 239,Pagos,ACH,Seguridad,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-08,55,Sí,No
-TC-0240,Validar internas - escenario 240,Transferencias,Interbancarias,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-30,0,No,No
-TC-0241,Validar pagos - escenario 241,Préstamos,Cuotas,Regresión,Media,No ejecutado,Sin defecto,,SIT,R25,Miguel,2026-08-01,0,No,No
-TC-0242,Validar lbtr - escenario 242,Pagos,ACH,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-31,31,Sí,Sí
-TC-0243,Validar desembolso - escenario 243,Préstamos,Pagos,COB/EOD,Media,Fallido,Alta,DEF-1047,UAT,R25,Carlos,2026-07-01,44,Sí,Sí
-TC-0244,Validar creación - escenario 244,Clientes,Bloqueo,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-11,26,Sí,No
-TC-0245,Validar lbtr - escenario 245,Pagos,LBTR,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-17,38,Sí,No
-TC-0246,Validar mantenimiento - escenario 246,Cuentas,Mantenimiento,API,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-23,75,Sí,No
-TC-0247,Validar ach - escenario 247,Pagos,LBTR,Regresión,Crítica,Aprobado,Sin defecto,,SIT,R25,José,2026-07-24,73,Sí,Sí
-TC-0248,Validar debida diligencia - escenario 248,Clientes,Creación,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-21,21,Sí,No
-TC-0249,Validar bloqueo - escenario 249,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-23,12,Sí,Sí
-TC-0250,Validar reversos - escenario 250,Préstamos,Reversos,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-13,55,Sí,Sí
-TC-0251,Validar debida diligencia - escenario 251,Clientes,Actualización,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-02,57,Sí,Sí
-TC-0252,Validar pagos - escenario 252,Préstamos,Reversos,Funcional,Alta,Fallido,Baja,DEF-1060,UAT,R25,Ana,2026-07-19,27,Sí,Sí
-TC-0253,Validar lbtr - escenario 253,Pagos,Pago de servicios,Funcional,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,21,Sí,Sí
-TC-0254,Validar lbtr - escenario 254,Pagos,Pago de servicios,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-14,0,No,Sí
-TC-0255,Validar creación - escenario 255,Clientes,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-12,48,Sí,No
-TC-0256,Validar lbtr - escenario 256,Pagos,Pago de servicios,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-09,47,Sí,Sí
-TC-0257,Validar actualización - escenario 257,Clientes,Debida diligencia,API,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-10,72,Sí,No
-TC-0258,Validar pago de servicios - escenario 258,Pagos,Pago de servicios,Funcional,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-08-02,0,No,No
-TC-0259,Validar desembolso - escenario 259,Préstamos,Reversos,Integración,Baja,No ejecutado,Sin defecto,,QA,R25,Ana,2026-08-17,0,No,No
-TC-0260,Validar creación - escenario 260,Clientes,Bloqueo,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-09,7,Sí,No
-TC-0261,Validar emisión - escenario 261,Tarjetas,Emisión,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-08-16,0,No,No
-TC-0262,Validar reversos - escenario 262,Pagos,LBTR,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-07,36,Sí,Sí
-TC-0263,Validar actualización - escenario 263,Clientes,Debida diligencia,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-11,4,Sí,Sí
-TC-0264,Validar cuotas - escenario 264,Préstamos,Pagos,Regresión,Baja,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-30,18,Sí,No
-TC-0265,Validar internas - escenario 265,Transferencias,Internas,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-08,0,No,No
-TC-0266,Validar cargos - escenario 266,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-11,23,Sí,No
-TC-0267,Validar creación - escenario 267,Clientes,Bloqueo,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-01,19,Sí,No
-TC-0268,Validar pagos - escenario 268,Préstamos,Desembolso,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,63,Sí,No
-TC-0269,Validar interbancarias - escenario 269,Transferencias,Reversos,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-30,6,Sí,No
-TC-0270,Validar debida diligencia - escenario 270,Clientes,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-17,59,Sí,Sí
-TC-0271,Validar debida diligencia - escenario 271,Clientes,Creación,COB/EOD,Alta,Bloqueado,Media,DEF-1271,SIT,R25,José,2026-08-04,63,Sí,No
-TC-0272,Validar pagos - escenario 272,Tarjetas,Bloqueo,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-19,62,Sí,Sí
-TC-0273,Validar internas - escenario 273,Transferencias,Internas,COB/EOD,Baja,Fallido,Baja,DEF-1273,SIT,R25,Laura,2026-07-03,6,Sí,No
-TC-0274,Validar interbancarias - escenario 274,Transferencias,Límites,Seguridad,Media,Fallido,Alta,DEF-1274,SIT,R25,Carlos,2026-07-27,16,Sí,No
-TC-0275,Validar creación - escenario 275,Clientes,Actualización,Seguridad,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-09,42,No,No
-TC-0276,Validar emisión - escenario 276,Tarjetas,Emisión,COB/EOD,Alta,No ejecutado,Sin defecto,,QA,R25,José,2026-07-28,0,No,No
-TC-0277,Validar cargos - escenario 277,Cuentas,Apertura,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-08,46,Sí,No
-TC-0278,Validar apertura - escenario 278,Cuentas,Cargos,COB/EOD,Media,Bloqueado,Media,DEF-1278,SIT,R25,Miguel,2026-07-09,7,Sí,No
-TC-0279,Validar ach - escenario 279,Pagos,LBTR,Funcional,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-07-29,0,No,No
-TC-0280,Validar interbancarias - escenario 280,Transferencias,Internas,Integración,Media,Bloqueado,Alta,DEF-1143,SIT,R25,Carlos,2026-07-13,72,Sí,No
-TC-0281,Validar mantenimiento - escenario 281,Cuentas,Apertura,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-02,4,Sí,No
-TC-0282,Validar consumos - escenario 282,Tarjetas,Consumos,Integración,Baja,Fallido,Media,DEF-1282,QA,R25,José,2026-07-20,26,Sí,Sí
-TC-0283,Validar actualización - escenario 283,Clientes,Debida diligencia,COB/EOD,Media,Fallido,Media,DEF-1043,QA,R25,Carlos,2026-08-07,33,No,Sí
-TC-0284,Validar consumos - escenario 284,Tarjetas,Pagos,API,Crítica,Fallido,Baja,DEF-1284,QA,R25,Carlos,2026-07-09,57,Sí,No
-TC-0285,Validar reversos - escenario 285,Transferencias,Interbancarias,Seguridad,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-14,46,Sí,No
-TC-0286,Validar reversos - escenario 286,Transferencias,Límites,Integración,Baja,Bloqueado,Media,DEF-1286,SIT,R25,Laura,2026-08-10,31,Sí,No
-TC-0287,Validar bloqueo - escenario 287,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-20,45,Sí,No
-TC-0288,Validar pagos - escenario 288,Préstamos,Pagos,API,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-20,0,No,Sí
-TC-0289,Validar bloqueo - escenario 289,Clientes,Debida diligencia,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-18,51,Sí,Sí
-TC-0290,Validar pago de servicios - escenario 290,Pagos,Reversos,COB/EOD,Media,Fallido,Baja,DEF-1290,UAT,R25,Miguel,2026-07-17,16,No,No
-TC-0291,Validar interbancarias - escenario 291,Transferencias,Interbancarias,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-18,19,Sí,Sí
-TC-0292,Validar pagos - escenario 292,Préstamos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-17,7,Sí,No
-TC-0293,Validar mantenimiento - escenario 293,Cuentas,Mantenimiento,Funcional,Media,Fallido,Baja,DEF-1055,UAT,R25,Miguel,2026-08-16,43,Sí,No
-TC-0294,Validar pago de servicios - escenario 294,Pagos,Pago de servicios,Seguridad,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-04,22,Sí,Sí
-TC-0295,Validar reversos - escenario 295,Préstamos,Reversos,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-09,16,Sí,No
-TC-0296,Validar mantenimiento - escenario 296,Cuentas,Apertura,Integración,Media,Fallido,Alta,DEF-1296,QA,R25,Laura,2026-07-04,4,Sí,Sí
-TC-0297,Validar lbtr - escenario 297,Pagos,Reversos,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-02,7,Sí,Sí
-TC-0298,Validar bloqueo - escenario 298,Clientes,Actualización,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-08-03,31,Sí,No
-TC-0299,Validar ach - escenario 299,Pagos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-25,53,Sí,No
-TC-0300,Validar reversos - escenario 300,Transferencias,Reversos,Seguridad,Media,Fallido,Alta,DEF-1274,UAT,R25,Elena,2026-07-20,56,Sí,Sí
-TC-0301,Validar pagos - escenario 301,Préstamos,Pagos,Funcional,Media,Aprobado,Sin defecto,,QA,R25,José,2026-08-14,48,Sí,No
-TC-0302,Validar pago de servicios - escenario 302,Pagos,Pago de servicios,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-05,56,Sí,No
-TC-0303,Validar actualización - escenario 303,Clientes,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-23,34,Sí,No
-TC-0304,Validar bloqueo - escenario 304,Tarjetas,Bloqueo,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-31,0,No,No
-TC-0305,Validar creación - escenario 305,Clientes,Bloqueo,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-11,26,Sí,No
-TC-0306,Validar bloqueo - escenario 306,Tarjetas,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-17,19,Sí,No
-TC-0307,Validar apertura - escenario 307,Cuentas,Apertura,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-30,68,Sí,Sí
-TC-0308,Validar pagos - escenario 308,Préstamos,Cuotas,API,Crítica,Aprobado,Sin defecto,,UAT,R25,José,2026-08-04,23,Sí,Sí
-TC-0309,Validar apertura - escenario 309,Cuentas,Cierre,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-21,33,Sí,Sí
-TC-0310,Validar reversos - escenario 310,Préstamos,Desembolso,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-08-07,51,Sí,Sí
-TC-0311,Validar límites - escenario 311,Transferencias,Límites,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-03,59,Sí,No
-TC-0312,Validar cierre - escenario 312,Cuentas,Cierre,Integración,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-10,64,Sí,No
-TC-0313,Validar bloqueo - escenario 313,Clientes,Actualización,Regresión,Crítica,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-27,48,No,Sí
-TC-0314,Validar pago de servicios - escenario 314,Pagos,Reversos,Funcional,Media,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-08-01,0,No,No
-TC-0315,Validar debida diligencia - escenario 315,Clientes,Bloqueo,Regresión,Alta,Fallido,Media,DEF-1315,QA,R25,Miguel,2026-07-07,16,Sí,No
-TC-0316,Validar cargos - escenario 316,Cuentas,Cargos,Integración,Alta,Fallido,Alta,DEF-1296,QA,R25,Elena,2026-08-05,39,Sí,No
-TC-0317,Validar desembolso - escenario 317,Préstamos,Reversos,COB/EOD,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-01,13,Sí,No
-TC-0318,Validar reversos - escenario 318,Préstamos,Reversos,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-13,22,Sí,Sí
-TC-0319,Validar debida diligencia - escenario 319,Clientes,Creación,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-13,46,Sí,No
-TC-0320,Validar actualización - escenario 320,Clientes,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,18,Sí,No
-TC-0321,Validar debida diligencia - escenario 321,Clientes,Actualización,Seguridad,Baja,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-15,0,No,No
-TC-0322,Validar apertura - escenario 322,Cuentas,Apertura,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-19,74,Sí,No
-TC-0323,Validar desembolso - escenario 323,Préstamos,Cuotas,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-01,66,Sí,Sí
-TC-0324,Validar pagos - escenario 324,Tarjetas,Consumos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,14,Sí,No
-TC-0325,Validar emisión - escenario 325,Tarjetas,Emisión,API,Media,Bloqueado,Alta,DEF-1224,UAT,R25,José,2026-07-30,21,Sí,Sí
-TC-0326,Validar bloqueo - escenario 326,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-08,38,Sí,Sí
-TC-0327,Validar pagos - escenario 327,Préstamos,Reversos,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-08-13,15,Sí,No
-TC-0328,Validar bloqueo - escenario 328,Clientes,Bloqueo,COB/EOD,Baja,Fallido,Media,DEF-1315,UAT,R25,Laura,2026-07-22,44,Sí,Sí
-TC-0329,Validar reversos - escenario 329,Transferencias,Internas,Seguridad,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-28,6,No,No
-TC-0330,Validar mantenimiento - escenario 330,Cuentas,Cierre,Integración,Alta,Fallido,Alta,DEF-1296,SIT,R25,Laura,2026-07-17,6,Sí,No
-TC-0331,Validar consumos - escenario 331,Tarjetas,Bloqueo,Seguridad,Baja,Fallido,Baja,DEF-1284,UAT,R25,Laura,2026-08-09,15,Sí,Sí
-TC-0332,Validar límites - escenario 332,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,31,Sí,No
-TC-0333,Validar ach - escenario 333,Pagos,Reversos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-10,7,Sí,Sí
-TC-0334,Validar límites - escenario 334,Transferencias,Límites,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-08,25,Sí,No
-TC-0335,Validar ach - escenario 335,Pagos,LBTR,Regresión,Crítica,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-26,0,No,Sí
-TC-0336,Validar desembolso - escenario 336,Préstamos,Desembolso,API,Crítica,Aprobado,Sin defecto,,UAT,R25,José,2026-07-25,31,Sí,No
-TC-0337,Validar mantenimiento - escenario 337,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-24,15,Sí,Sí
-TC-0338,Validar reversos - escenario 338,Préstamos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-27,23,Sí,No
-TC-0339,Validar reversos - escenario 339,Pagos,Reversos,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-02,54,Sí,No
-TC-0340,Validar pagos - escenario 340,Tarjetas,Pagos,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-25,0,No,No
-TC-0341,Validar ach - escenario 341,Pagos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,35,Sí,No
-TC-0342,Validar lbtr - escenario 342,Pagos,Pago de servicios,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-29,18,Sí,Sí
-TC-0343,Validar bloqueo - escenario 343,Clientes,Actualización,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,39,Sí,No
-TC-0344,Validar interbancarias - escenario 344,Transferencias,Límites,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-07-18,62,No,No
-TC-0345,Validar cierre - escenario 345,Cuentas,Cargos,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-30,49,Sí,Sí
-TC-0346,Validar emisión - escenario 346,Tarjetas,Pagos,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-04,39,Sí,No
-TC-0347,Validar consumos - escenario 347,Tarjetas,Bloqueo,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-04,59,Sí,Sí
-TC-0348,Validar emisión - escenario 348,Tarjetas,Consumos,Regresión,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-06,0,No,No
-TC-0349,Validar mantenimiento - escenario 349,Cuentas,Cargos,Regresión,Alta,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-07-22,0,No,No
-TC-0350,Validar actualización - escenario 350,Clientes,Actualización,COB/EOD,Alta,Fallido,Baja,DEF-1021,UAT,R25,Laura,2026-07-11,42,Sí,No
-TC-0351,Validar bloqueo - escenario 351,Tarjetas,Consumos,COB/EOD,Alta,Bloqueado,Alta,DEF-1224,SIT,R25,Ana,2026-08-14,25,Sí,No
-TC-0352,Validar bloqueo - escenario 352,Tarjetas,Emisión,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-15,48,Sí,Sí
-TC-0353,Validar creación - escenario 353,Clientes,Actualización,Funcional,Media,Fallido,Alta,DEF-1353,QA,R25,José,2026-08-09,50,Sí,Sí
-TC-0354,Validar reversos - escenario 354,Pagos,LBTR,Funcional,Media,Fallido,Baja,DEF-1290,QA,R25,Miguel,2026-07-10,30,Sí,No
-TC-0355,Validar cargos - escenario 355,Cuentas,Mantenimiento,API,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-30,39,Sí,Sí
-TC-0356,Validar creación - escenario 356,Clientes,Debida diligencia,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-07-12,0,No,No
-TC-0357,Validar cargos - escenario 357,Cuentas,Cargos,COB/EOD,Baja,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-11,0,No,No
-TC-0358,Validar cargos - escenario 358,Cuentas,Mantenimiento,COB/EOD,Media,Fallido,Baja,DEF-1358,QA,R25,Laura,2026-08-16,32,Sí,Sí
-TC-0359,Validar bloqueo - escenario 359,Clientes,Creación,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-05,12,Sí,Sí
-TC-0360,Validar pagos - escenario 360,Préstamos,Reversos,COB/EOD,Alta,Fallido,Alta,DEF-1360,UAT,R25,José,2026-08-09,65,Sí,No
-TC-0361,Validar actualización - escenario 361,Clientes,Actualización,Regresión,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-04,31,Sí,Sí
-TC-0362,Validar ach - escenario 362,Pagos,LBTR,Integración,Baja,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-07-14,0,No,No
-TC-0363,Validar ach - escenario 363,Pagos,LBTR,Seguridad,Crítica,Fallido,Alta,DEF-1186,QA,R25,Miguel,2026-08-03,28,Sí,No
-TC-0364,Validar cierre - escenario 364,Cuentas,Cierre,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-01,35,Sí,Sí
-TC-0365,Validar bloqueo - escenario 365,Clientes,Actualización,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-15,38,Sí,Sí
-TC-0366,Validar cuotas - escenario 366,Préstamos,Pagos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-15,33,Sí,Sí
-TC-0367,Validar pagos - escenario 367,Préstamos,Desembolso,Seguridad,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-28,0,No,No
-TC-0368,Validar apertura - escenario 368,Cuentas,Cargos,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,64,Sí,No
-TC-0369,Validar cargos - escenario 369,Cuentas,Cierre,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-07,74,Sí,No
-TC-0370,Validar mantenimiento - escenario 370,Cuentas,Cierre,Regresión,Baja,Fallido,Media,DEF-1370,QA,R25,Miguel,2026-07-05,21,Sí,Sí
-TC-0371,Validar creación - escenario 371,Clientes,Actualización,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-20,73,Sí,No
-TC-0372,Validar cierre - escenario 372,Cuentas,Cargos,Integración,Alta,Fallido,Alta,DEF-1372,SIT,R25,Ana,2026-08-07,5,Sí,No
-TC-0373,Validar pago de servicios - escenario 373,Pagos,Pago de servicios,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,70,Sí,No
-TC-0374,Validar límites - escenario 374,Transferencias,Reversos,Regresión,Alta,Fallido,Media,DEF-1198,UAT,R25,Ana,2026-08-06,4,No,No
-TC-0375,Validar apertura - escenario 375,Cuentas,Mantenimiento,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-26,38,Sí,Sí
-TC-0376,Validar apertura - escenario 376,Cuentas,Cierre,Regresión,Alta,No ejecutado,Sin defecto,,SIT,R25,Laura,2026-08-09,0,No,No
-TC-0377,Validar apertura - escenario 377,Cuentas,Mantenimiento,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-03,24,No,No
-TC-0378,Validar pagos - escenario 378,Tarjetas,Pagos,Integración,Baja,Fallido,Alta,DEF-1191,QA,R25,Laura,2026-07-08,39,Sí,Sí
-TC-0379,Validar pago de servicios - escenario 379,Pagos,ACH,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-14,18,Sí,No
-TC-0380,Validar internas - escenario 380,Transferencias,Límites,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-05,25,Sí,No
-TC-0381,Validar cargos - escenario 381,Cuentas,Mantenimiento,API,Baja,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-07,57,Sí,Sí
-TC-0382,Validar reversos - escenario 382,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-04,47,Sí,Sí
-TC-0383,Validar límites - escenario 383,Transferencias,Reversos,API,Baja,Fallido,Alta,DEF-1274,QA,R25,José,2026-08-02,11,Sí,Sí
-TC-0384,Validar actualización - escenario 384,Clientes,Creación,COB/EOD,Crítica,Fallido,Media,DEF-1315,SIT,R25,Miguel,2026-07-20,52,Sí,No
-TC-0385,Validar debida diligencia - escenario 385,Clientes,Bloqueo,Regresión,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-08,50,Sí,No
-TC-0386,Validar actualización - escenario 386,Clientes,Actualización,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-27,10,Sí,No
-TC-0387,Validar lbtr - escenario 387,Pagos,Reversos,API,Media,Fallido,Media,DEF-1129,SIT,R25,Elena,2026-07-08,19,Sí,No
-TC-0388,Validar actualización - escenario 388,Clientes,Debida diligencia,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-08-14,62,No,Sí
-TC-0389,Validar actualización - escenario 389,Clientes,Actualización,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-09,6,Sí,No
-TC-0390,Validar cuotas - escenario 390,Préstamos,Pagos,COB/EOD,Crítica,Fallido,Alta,DEF-1360,QA,R25,Elena,2026-07-10,67,Sí,No
-TC-0391,Validar reversos - escenario 391,Pagos,Reversos,Funcional,Media,Bloqueado,Alta,DEF-1391,QA,R25,Laura,2026-08-09,73,Sí,No
-TC-0392,Validar interbancarias - escenario 392,Transferencias,Límites,Regresión,Crítica,No ejecutado,Sin defecto,,SIT,R25,José,2026-08-03,0,No,Sí
-TC-0393,Validar mantenimiento - escenario 393,Cuentas,Mantenimiento,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-25,59,Sí,No
-TC-0394,Validar pagos - escenario 394,Préstamos,Desembolso,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-14,59,Sí,No
-TC-0395,Validar reversos - escenario 395,Pagos,LBTR,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-28,14,Sí,No
-TC-0396,Validar consumos - escenario 396,Tarjetas,Bloqueo,Integración,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-10,14,Sí,No
-TC-0397,Validar cargos - escenario 397,Cuentas,Cargos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-03,68,Sí,No
-TC-0398,Validar límites - escenario 398,Transferencias,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-21,19,Sí,No
-TC-0399,Validar reversos - escenario 399,Préstamos,Cuotas,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,38,Sí,No
-TC-0400,Validar reversos - escenario 400,Préstamos,Reversos,Regresión,Crítica,Bloqueado,Media,DEF-1085,QA,R25,Elena,2026-07-28,42,Sí,No
-TC-0401,Validar actualización - escenario 401,Clientes,Debida diligencia,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-03,64,Sí,No
-TC-0402,Validar cierre - escenario 402,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-08-11,35,Sí,No
-TC-0403,Validar cuotas - escenario 403,Préstamos,Pagos,Regresión,Media,Fallido,Media,DEF-1403,QA,R25,José,2026-08-14,6,Sí,No
-TC-0404,Validar pagos - escenario 404,Préstamos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-08-06,17,Sí,No
-TC-0405,Validar reversos - escenario 405,Transferencias,Reversos,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-06,8,Sí,No
-TC-0406,Validar pagos - escenario 406,Préstamos,Desembolso,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-07-02,18,Sí,Sí
-TC-0407,Validar reversos - escenario 407,Pagos,Pago de servicios,Funcional,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-28,34,Sí,No
-TC-0408,Validar ach - escenario 408,Pagos,ACH,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-13,52,Sí,Sí
-TC-0409,Validar apertura - escenario 409,Cuentas,Cargos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-08,30,Sí,Sí
-TC-0410,Validar actualización - escenario 410,Clientes,Actualización,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-10,56,Sí,Sí
-TC-0411,Validar interbancarias - escenario 411,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-08,17,Sí,No
-TC-0412,Validar pagos - escenario 412,Préstamos,Cuotas,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-09,55,Sí,Sí
-TC-0413,Validar cuotas - escenario 413,Préstamos,Cuotas,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-02,45,Sí,Sí
-TC-0414,Validar cuotas - escenario 414,Préstamos,Desembolso,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-14,41,Sí,No
-TC-0415,Validar apertura - escenario 415,Cuentas,Cierre,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,José,2026-08-08,20,Sí,Sí
-TC-0416,Validar límites - escenario 416,Transferencias,Internas,Seguridad,Baja,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-17,71,Sí,Sí
-TC-0417,Validar cuotas - escenario 417,Préstamos,Desembolso,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-15,8,Sí,No
-TC-0418,Validar cargos - escenario 418,Cuentas,Cierre,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-08-13,23,Sí,No
-TC-0419,Validar actualización - escenario 419,Clientes,Creación,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-05,69,Sí,No
-TC-0420,Validar bloqueo - escenario 420,Tarjetas,Pagos,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-26,49,Sí,No
+TC-0001,Validar cuotas,Préstamos,Pagos,COB/EOD,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-15,48,Sí,Sí
+TC-0002,Validar pagos,Préstamos,Reversos,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-01,59,Sí,Sí
+TC-0003,Validar internas,Transferencias,Interbancarias,COB/EOD,Media,Fallido,Alta,DEF-1003,QA,R25,Carlos,2026-08-09,27,Sí,Sí
+TC-0004,Validar desembolso,Préstamos,Desembolso,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-16,64,Sí,No
+TC-0005,Validar apertura,Cuentas,Apertura,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-25,74,Sí,No
+TC-0006,Validar interbancarias,Transferencias,Límites,API,Media,Fallido,Media,DEF-1006,UAT,R25,Ana,2026-07-02,18,Sí,No
+TC-0007,Validar cargos,Cuentas,Cierre,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-07,64,Sí,No
+TC-0008,Validar cargos,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-21,55,Sí,Sí
+TC-0009,Validar pagos,Tarjetas,Pagos,API,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-25,27,Sí,No
+TC-0010,Validar pagos,Tarjetas,Bloqueo,Regresión,Crítica,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-20,25,Sí,No
+TC-0011,Validar cargos,Cuentas,Mantenimiento,COB/EOD,Media,Fallido,Crítica,DEF-1011,SIT,R25,Elena,2026-07-08,69,No,No
+TC-0012,Validar consumos,Tarjetas,Consumos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-13,34,Sí,No
+TC-0013,Validar actualización,Clientes,Creación,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-08-13,52,Sí,No
+TC-0014,Validar consumos,Tarjetas,Emisión,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-12,58,Sí,No
+TC-0015,Validar mantenimiento,Cuentas,Cargos,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-19,36,Sí,Sí
+TC-0016,Validar reversos,Transferencias,Reversos,API,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-04,38,Sí,No
+TC-0017,Validar debida diligencia,Clientes,Debida diligencia,Seguridad,Alta,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-07,0,No,Sí
+TC-0018,Validar bloqueo,Clientes,Creación,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-14,54,Sí,Sí
+TC-0019,Validar consumos,Tarjetas,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-10,55,Sí,No
+TC-0020,Validar pagos,Préstamos,Reversos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-10,21,Sí,No
+TC-0021,Validar bloqueo,Clientes,Creación,Funcional,Media,Fallido,Baja,DEF-1021,QA,R25,Miguel,2026-07-22,55,No,Sí
+TC-0022,Validar reversos,Préstamos,Desembolso,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Ana,2026-07-14,0,No,No
+TC-0023,Validar interbancarias,Transferencias,Interbancarias,API,Media,Fallido,Media,DEF-1006,SIT,R25,Laura,2026-07-20,72,Sí,No
+TC-0024,Validar reversos,Pagos,LBTR,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-07-27,37,Sí,No
+TC-0025,Validar reversos,Transferencias,Interbancarias,Funcional,Baja,Bloqueado,Alta,DEF-1025,SIT,R25,Laura,2026-08-01,39,No,Sí
+TC-0026,Validar reversos,Transferencias,Internas,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-12,57,No,No
+TC-0027,Validar cargos,Cuentas,Cargos,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-03,69,Sí,No
+TC-0028,Validar internas,Transferencias,Reversos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-17,45,Sí,No
+TC-0029,Validar ach,Pagos,ACH,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-25,19,Sí,Sí
+TC-0030,Validar reversos,Préstamos,Reversos,COB/EOD,Crítica,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-01,12,Sí,No
+TC-0031,Validar ach,Pagos,LBTR,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-26,0,No,No
+TC-0032,Validar ach,Pagos,LBTR,API,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,49,Sí,Sí
+TC-0033,Validar cuotas,Préstamos,Pagos,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-26,0,No,No
+TC-0034,Validar pago de servicios,Pagos,Reversos,API,Alta,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-10,0,No,No
+TC-0035,Validar emisión,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-13,23,Sí,No
+TC-0036,Validar consumos,Tarjetas,Consumos,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-17,0,No,No
+TC-0037,Validar creación,Clientes,Bloqueo,API,Alta,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-23,0,No,No
+TC-0038,Validar pago de servicios,Pagos,LBTR,Integración,Alta,Bloqueado,Media,DEF-1038,QA,R25,José,2026-07-13,21,Sí,No
+TC-0039,Validar bloqueo,Clientes,Creación,Regresión,Media,Bloqueado,Media,DEF-1039,SIT,R25,Miguel,2026-07-05,51,No,No
+TC-0040,Validar bloqueo,Tarjetas,Pagos,Regresión,Baja,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-08-09,0,No,Sí
+TC-0041,Validar cargos,Cuentas,Mantenimiento,Integración,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-15,42,Sí,Sí
+TC-0042,Validar internas,Transferencias,Límites,Integración,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-08-07,0,No,No
+TC-0043,Validar actualización,Clientes,Creación,Funcional,Alta,Fallido,Media,DEF-1043,UAT,R25,Ana,2026-08-12,49,Sí,No
+TC-0044,Validar cuotas,Préstamos,Cuotas,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-07,5,Sí,Sí
+TC-0045,Validar lbtr,Pagos,LBTR,Seguridad,Crítica,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-09,22,Sí,No
+TC-0046,Validar ach,Pagos,ACH,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-29,65,Sí,No
+TC-0047,Validar cuotas,Préstamos,Pagos,COB/EOD,Alta,Fallido,Alta,DEF-1047,QA,R25,Elena,2026-07-29,27,Sí,No
+TC-0048,Validar pago de servicios,Pagos,ACH,API,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-09,16,No,Sí
+TC-0049,Validar cargos,Cuentas,Mantenimiento,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-16,70,Sí,No
+TC-0050,Validar cierre,Cuentas,Cierre,Funcional,Alta,Fallido,Alta,DEF-1050,SIT,R25,Ana,2026-08-07,71,No,No
+TC-0051,Validar reversos,Pagos,LBTR,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-10,30,Sí,No
+TC-0052,Validar reversos,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-12,9,Sí,No
+TC-0053,Validar actualización,Clientes,Creación,API,Baja,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-07,15,Sí,No
+TC-0054,Validar mantenimiento,Cuentas,Cargos,Integración,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-23,40,Sí,No
+TC-0055,Validar cierre,Cuentas,Cargos,Integración,Media,Fallido,Baja,DEF-1055,UAT,R25,José,2026-07-28,57,Sí,No
+TC-0056,Validar creación,Clientes,Debida diligencia,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-02,50,Sí,Sí
+TC-0057,Validar interbancarias,Transferencias,Internas,API,Media,Fallido,Media,DEF-1006,UAT,R25,Elena,2026-08-13,14,Sí,No
+TC-0058,Validar cierre,Cuentas,Cargos,API,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-21,19,Sí,No
+TC-0059,Validar reversos,Pagos,Pago de servicios,Regresión,Media,Fallido,Alta,DEF-1059,SIT,R25,Laura,2026-07-24,50,Sí,Sí
+TC-0060,Validar cuotas,Préstamos,Desembolso,Funcional,Baja,Fallido,Baja,DEF-1060,SIT,R25,Ana,2026-08-07,37,Sí,No
+TC-0061,Validar reversos,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-12,69,Sí,Sí
+TC-0062,Validar debida diligencia,Clientes,Creación,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-26,70,Sí,No
+TC-0063,Validar internas,Transferencias,Internas,Regresión,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-06,13,Sí,No
+TC-0064,Validar límites,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-05,68,Sí,No
+TC-0065,Validar desembolso,Préstamos,Pagos,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-22,45,Sí,No
+TC-0066,Validar ach,Pagos,Reversos,COB/EOD,Alta,Bloqueado,Media,DEF-1038,QA,R25,Ana,2026-07-18,21,No,No
+TC-0067,Validar lbtr,Pagos,Pago de servicios,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-15,51,Sí,No
+TC-0068,Validar bloqueo,Tarjetas,Consumos,Funcional,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-09,41,No,No
+TC-0069,Validar cargos,Cuentas,Cierre,API,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,33,Sí,No
+TC-0070,Validar ach,Pagos,LBTR,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-29,7,Sí,No
+TC-0071,Validar mantenimiento,Cuentas,Apertura,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-08-13,58,Sí,Sí
+TC-0072,Validar pagos,Préstamos,Desembolso,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,55,No,No
+TC-0073,Validar reversos,Transferencias,Interbancarias,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-16,72,Sí,Sí
+TC-0074,Validar apertura,Cuentas,Cierre,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-22,4,Sí,No
+TC-0075,Validar pagos,Tarjetas,Bloqueo,Regresión,Alta,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-05,0,No,No
+TC-0076,Validar apertura,Cuentas,Cierre,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-09,67,Sí,No
+TC-0077,Validar lbtr,Pagos,LBTR,Funcional,Media,Fallido,Alta,DEF-1059,UAT,R25,Ana,2026-08-06,57,Sí,No
+TC-0078,Validar interbancarias,Transferencias,Reversos,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-03,16,Sí,No
+TC-0079,Validar límites,Transferencias,Interbancarias,Funcional,Media,Fallido,Alta,DEF-1003,SIT,R25,Elena,2026-07-12,14,Sí,No
+TC-0080,Validar límites,Transferencias,Internas,Seguridad,Crítica,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-19,0,No,No
+TC-0081,Validar internas,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-07-05,54,Sí,No
+TC-0082,Validar reversos,Transferencias,Interbancarias,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-14,20,Sí,No
+TC-0083,Validar actualización,Clientes,Debida diligencia,COB/EOD,Alta,Fallido,Baja,DEF-1021,UAT,R25,Carlos,2026-07-19,43,Sí,Sí
+TC-0084,Validar pago de servicios,Pagos,ACH,Seguridad,Alta,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-07-22,0,No,Sí
+TC-0085,Validar cuotas,Préstamos,Pagos,Regresión,Crítica,Bloqueado,Media,DEF-1085,QA,R25,Laura,2026-07-05,68,Sí,Sí
+TC-0086,Validar bloqueo,Clientes,Bloqueo,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-23,52,Sí,No
+TC-0087,Validar desembolso,Préstamos,Cuotas,Regresión,Alta,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-20,0,No,Sí
+TC-0088,Validar pago de servicios,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-01,25,Sí,No
+TC-0089,Validar creación,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-06,38,Sí,Sí
+TC-0090,Validar pagos,Tarjetas,Consumos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-30,8,Sí,Sí
+TC-0091,Validar cuotas,Préstamos,Reversos,Seguridad,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-27,65,Sí,Sí
+TC-0092,Validar apertura,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-17,35,No,Sí
+TC-0093,Validar cuotas,Préstamos,Cuotas,API,Alta,Bloqueado,Alta,DEF-1093,QA,R25,Carlos,2026-07-22,16,Sí,No
+TC-0094,Validar pagos,Préstamos,Reversos,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-10,58,Sí,No
+TC-0095,Validar consumos,Tarjetas,Pagos,Seguridad,Baja,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-08-07,0,No,No
+TC-0096,Validar emisión,Tarjetas,Emisión,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-22,25,Sí,No
+TC-0097,Validar consumos,Tarjetas,Pagos,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-15,18,Sí,No
+TC-0098,Validar cierre,Cuentas,Cierre,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-24,0,No,No
+TC-0099,Validar desembolso,Préstamos,Desembolso,Integración,Media,Fallido,Media,DEF-1099,QA,R25,Ana,2026-07-25,67,Sí,No
+TC-0100,Validar reversos,Préstamos,Cuotas,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-20,58,Sí,Sí
+TC-0101,Validar reversos,Préstamos,Pagos,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-08-16,13,Sí,No
+TC-0102,Validar apertura,Cuentas,Cierre,COB/EOD,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-23,0,No,Sí
+TC-0103,Validar desembolso,Préstamos,Pagos,Integración,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-01,11,Sí,No
+TC-0104,Validar cierre,Cuentas,Cierre,API,Media,Fallido,Baja,DEF-1055,QA,R25,José,2026-07-20,50,Sí,No
+TC-0105,Validar actualización,Clientes,Creación,COB/EOD,Media,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-22,0,No,No
+TC-0106,Validar pagos,Tarjetas,Emisión,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-09,65,Sí,Sí
+TC-0107,Validar cargos,Cuentas,Cierre,Funcional,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-09,50,Sí,Sí
+TC-0108,Validar actualización,Clientes,Debida diligencia,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-15,12,Sí,Sí
+TC-0109,Validar desembolso,Préstamos,Reversos,API,Media,Bloqueado,Alta,DEF-1093,QA,R25,Ana,2026-08-09,27,Sí,Sí
+TC-0110,Validar pagos,Tarjetas,Emisión,API,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-07-03,63,No,No
+TC-0111,Validar emisión,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-01,42,Sí,Sí
+TC-0112,Validar internas,Transferencias,Límites,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-06,39,No,No
+TC-0113,Validar internas,Transferencias,Interbancarias,Seguridad,Media,Bloqueado,Alta,DEF-1025,SIT,R25,Laura,2026-07-13,32,Sí,Sí
+TC-0114,Validar emisión,Tarjetas,Emisión,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-18,12,Sí,Sí
+TC-0115,Validar apertura,Cuentas,Cierre,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-02,65,No,Sí
+TC-0116,Validar interbancarias,Transferencias,Interbancarias,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,68,Sí,No
+TC-0117,Validar consumos,Tarjetas,Emisión,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-14,51,Sí,No
+TC-0118,Validar consumos,Tarjetas,Pagos,Integración,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-22,75,Sí,Sí
+TC-0119,Validar límites,Transferencias,Reversos,Funcional,Baja,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-28,0,No,No
+TC-0120,Validar reversos,Préstamos,Reversos,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-29,38,Sí,Sí
+TC-0121,Validar actualización,Clientes,Debida diligencia,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-13,5,Sí,No
+TC-0122,Validar reversos,Pagos,Pago de servicios,Seguridad,Alta,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-10,0,No,No
+TC-0123,Validar pago de servicios,Pagos,LBTR,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-17,72,Sí,Sí
+TC-0124,Validar mantenimiento,Cuentas,Mantenimiento,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Elena,2026-08-10,0,No,No
+TC-0125,Validar pagos,Préstamos,Desembolso,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-31,17,Sí,Sí
+TC-0126,Validar pago de servicios,Pagos,Pago de servicios,Funcional,Media,No ejecutado,Sin defecto,,SIT,R25,José,2026-07-20,0,No,No
+TC-0127,Validar interbancarias,Transferencias,Límites,Integración,Alta,Bloqueado,Alta,DEF-1025,UAT,R25,Laura,2026-08-04,45,Sí,Sí
+TC-0128,Validar pago de servicios,Pagos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-14,49,Sí,Sí
+TC-0129,Validar reversos,Pagos,Pago de servicios,API,Alta,Fallido,Media,DEF-1129,UAT,R25,José,2026-08-05,26,Sí,Sí
+TC-0130,Validar debida diligencia,Clientes,Bloqueo,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-02,29,Sí,Sí
+TC-0131,Validar pagos,Tarjetas,Bloqueo,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-08-13,0,No,No
+TC-0132,Validar bloqueo,Tarjetas,Consumos,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-28,31,Sí,No
+TC-0133,Validar cargos,Cuentas,Apertura,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-04,54,Sí,Sí
+TC-0134,Validar reversos,Transferencias,Reversos,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-28,12,Sí,No
+TC-0135,Validar cargos,Cuentas,Cargos,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-01,70,Sí,No
+TC-0136,Validar apertura,Cuentas,Apertura,Integración,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-20,74,Sí,Sí
+TC-0137,Validar límites,Transferencias,Internas,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-21,35,Sí,Sí
+TC-0138,Validar reversos,Pagos,LBTR,Integración,Alta,No ejecutado,Sin defecto,,QA,R25,Carlos,2026-07-11,0,No,No
+TC-0139,Validar pagos,Préstamos,Pagos,Funcional,Alta,Fallido,Alta,DEF-1047,UAT,R25,José,2026-07-19,9,Sí,No
+TC-0140,Validar desembolso,Préstamos,Desembolso,Integración,Baja,Bloqueado,Alta,DEF-1093,SIT,R25,Elena,2026-08-01,16,Sí,Sí
+TC-0141,Validar reversos,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-15,37,Sí,No
+TC-0142,Validar pagos,Préstamos,Cuotas,Seguridad,Media,Fallido,Media,DEF-1099,QA,R25,Laura,2026-08-06,25,Sí,Sí
+TC-0143,Validar internas,Transferencias,Límites,Regresión,Alta,Bloqueado,Alta,DEF-1143,UAT,R25,Elena,2026-07-14,18,Sí,Sí
+TC-0144,Validar bloqueo,Tarjetas,Bloqueo,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,José,2026-07-28,40,Sí,Sí
+TC-0145,Validar internas,Transferencias,Interbancarias,API,Alta,Fallido,Alta,DEF-1003,SIT,R25,Carlos,2026-07-01,31,Sí,No
+TC-0146,Validar bloqueo,Tarjetas,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-07-18,12,Sí,Sí
+TC-0147,Validar bloqueo,Clientes,Debida diligencia,Integración,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-24,27,No,No
+TC-0148,Validar cargos,Cuentas,Cargos,Funcional,Alta,Bloqueado,Alta,DEF-1148,UAT,R25,Laura,2026-08-16,23,Sí,No
+TC-0149,Validar creación,Clientes,Debida diligencia,Regresión,Crítica,No ejecutado,Sin defecto,,UAT,R25,José,2026-08-04,0,No,Sí
+TC-0150,Validar internas,Transferencias,Reversos,API,Alta,Aprobado,Sin defecto,,SIT,R25,José,2026-07-30,65,Sí,Sí
+TC-0151,Validar bloqueo,Tarjetas,Pagos,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,10,Sí,No
+TC-0152,Validar bloqueo,Clientes,Actualización,Regresión,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-08-14,61,No,Sí
+TC-0153,Validar consumos,Tarjetas,Consumos,API,Alta,No ejecutado,Sin defecto,,SIT,R25,Laura,2026-07-30,0,No,No
+TC-0154,Validar creación,Clientes,Creación,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-08,0,No,Sí
+TC-0155,Validar apertura,Cuentas,Cierre,Seguridad,Crítica,Aprobado,Sin defecto,,SIT,R25,José,2026-07-24,67,Sí,No
+TC-0156,Validar reversos,Transferencias,Límites,Seguridad,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-12,74,Sí,No
+TC-0157,Validar pago de servicios,Pagos,Reversos,API,Baja,Fallido,Alta,DEF-1059,UAT,R25,Miguel,2026-07-02,61,Sí,No
+TC-0158,Validar reversos,Transferencias,Interbancarias,Integración,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-12,28,Sí,No
+TC-0159,Validar creación,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-16,28,Sí,No
+TC-0160,Validar límites,Transferencias,Internas,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-07-01,0,No,No
+TC-0161,Validar límites,Transferencias,Interbancarias,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,38,Sí,No
+TC-0162,Validar bloqueo,Tarjetas,Consumos,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-07,28,Sí,No
+TC-0163,Validar debida diligencia,Clientes,Debida diligencia,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-16,63,Sí,No
+TC-0164,Validar actualización,Clientes,Bloqueo,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-11,14,Sí,No
+TC-0165,Validar debida diligencia,Clientes,Creación,API,Media,Bloqueado,Media,DEF-1039,SIT,R25,Carlos,2026-08-09,46,Sí,No
+TC-0166,Validar reversos,Préstamos,Cuotas,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-09,62,Sí,No
+TC-0167,Validar consumos,Tarjetas,Pagos,API,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-15,26,Sí,Sí
+TC-0168,Validar creación,Clientes,Actualización,API,Media,Fallido,Media,DEF-1043,QA,R25,Laura,2026-07-01,41,Sí,Sí
+TC-0169,Validar apertura,Cuentas,Apertura,Regresión,Baja,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-27,62,Sí,Sí
+TC-0170,Validar internas,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-04,43,Sí,No
+TC-0171,Validar cuotas,Préstamos,Desembolso,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-09,9,Sí,No
+TC-0172,Validar cuotas,Préstamos,Desembolso,API,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-31,49,Sí,No
+TC-0173,Validar internas,Transferencias,Reversos,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-21,41,Sí,Sí
+TC-0174,Validar reversos,Préstamos,Cuotas,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-01,53,Sí,No
+TC-0175,Validar creación,Clientes,Actualización,Funcional,Crítica,Bloqueado,Media,DEF-1039,QA,R25,José,2026-07-11,60,Sí,No
+TC-0176,Validar creación,Clientes,Actualización,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,42,Sí,Sí
+TC-0177,Validar bloqueo,Clientes,Actualización,API,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-03,26,Sí,Sí
+TC-0178,Validar cierre,Cuentas,Apertura,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-30,13,Sí,No
+TC-0179,Validar reversos,Préstamos,Reversos,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-18,36,Sí,Sí
+TC-0180,Validar pago de servicios,Pagos,LBTR,Seguridad,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-07,53,Sí,No
+TC-0181,Validar interbancarias,Transferencias,Reversos,Integración,Media,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-28,0,No,Sí
+TC-0182,Validar internas,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-11,54,Sí,No
+TC-0183,Validar interbancarias,Transferencias,Límites,API,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-06,67,Sí,No
+TC-0184,Validar consumos,Tarjetas,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,68,Sí,Sí
+TC-0185,Validar límites,Transferencias,Interbancarias,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-21,68,Sí,No
+TC-0186,Validar reversos,Pagos,Pago de servicios,Regresión,Alta,Fallido,Alta,DEF-1186,SIT,R25,José,2026-07-31,68,Sí,Sí
+TC-0187,Validar creación,Clientes,Actualización,Integración,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-08,20,Sí,No
+TC-0188,Validar internas,Transferencias,Reversos,Funcional,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-12,6,Sí,No
+TC-0189,Validar mantenimiento,Cuentas,Cierre,API,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-30,14,Sí,Sí
+TC-0190,Validar reversos,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,27,Sí,No
+TC-0191,Validar consumos,Tarjetas,Pagos,Seguridad,Media,Fallido,Alta,DEF-1191,UAT,R25,Miguel,2026-07-25,26,Sí,Sí
+TC-0192,Validar reversos,Pagos,Pago de servicios,Regresión,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-08,55,Sí,No
+TC-0193,Validar ach,Pagos,ACH,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-09,44,Sí,Sí
+TC-0194,Validar consumos,Tarjetas,Consumos,COB/EOD,Alta,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-26,0,No,No
+TC-0195,Validar desembolso,Préstamos,Reversos,Seguridad,Media,Bloqueado,Media,DEF-1085,UAT,R25,José,2026-07-18,30,Sí,No
+TC-0196,Validar pago de servicios,Pagos,LBTR,Seguridad,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-05,32,Sí,No
+TC-0197,Validar límites,Transferencias,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-01,40,Sí,No
+TC-0198,Validar interbancarias,Transferencias,Interbancarias,Seguridad,Media,Fallido,Media,DEF-1198,QA,R25,Ana,2026-07-29,65,Sí,No
+TC-0199,Validar lbtr,Pagos,Pago de servicios,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-08-02,64,Sí,Sí
+TC-0200,Validar bloqueo,Clientes,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,67,Sí,No
+TC-0201,Validar pagos,Tarjetas,Emisión,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-01,36,Sí,No
+TC-0202,Validar ach,Pagos,Pago de servicios,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-17,34,Sí,Sí
+TC-0203,Validar emisión,Tarjetas,Consumos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-29,57,Sí,No
+TC-0204,Validar límites,Transferencias,Internas,API,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-07,49,Sí,No
+TC-0205,Validar pagos,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-20,33,Sí,No
+TC-0206,Validar debida diligencia,Clientes,Debida diligencia,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-25,60,Sí,No
+TC-0207,Validar bloqueo,Clientes,Bloqueo,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-03,0,No,No
+TC-0208,Validar mantenimiento,Cuentas,Cargos,Integración,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-08-11,0,No,No
+TC-0209,Validar cargos,Cuentas,Cierre,API,Alta,Fallido,Alta,DEF-1050,UAT,R25,Miguel,2026-07-09,31,Sí,No
+TC-0210,Validar creación,Clientes,Debida diligencia,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-17,68,Sí,No
+TC-0211,Validar cierre,Cuentas,Cargos,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-31,11,Sí,No
+TC-0212,Validar apertura,Cuentas,Cargos,Seguridad,Media,Fallido,Alta,DEF-1050,QA,R25,Elena,2026-07-29,46,Sí,Sí
+TC-0213,Validar consumos,Tarjetas,Emisión,API,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-14,59,Sí,No
+TC-0214,Validar internas,Transferencias,Límites,Funcional,Alta,Fallido,Media,DEF-1198,SIT,R25,José,2026-07-17,15,Sí,No
+TC-0215,Validar cuotas,Préstamos,Reversos,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-02,73,Sí,No
+TC-0216,Validar bloqueo,Clientes,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-21,36,Sí,No
+TC-0217,Validar consumos,Tarjetas,Bloqueo,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-02,38,Sí,No
+TC-0218,Validar cuotas,Préstamos,Desembolso,Integración,Baja,Fallido,Baja,DEF-1060,UAT,R25,Miguel,2026-08-07,46,Sí,No
+TC-0219,Validar cierre,Cuentas,Cargos,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-22,14,Sí,No
+TC-0220,Validar límites,Transferencias,Límites,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-08-13,23,No,Sí
+TC-0221,Validar emisión,Tarjetas,Consumos,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-03,61,Sí,No
+TC-0222,Validar creación,Clientes,Actualización,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-14,51,Sí,No
+TC-0223,Validar actualización,Clientes,Actualización,Regresión,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-18,0,No,No
+TC-0224,Validar pagos,Tarjetas,Bloqueo,Regresión,Baja,Bloqueado,Alta,DEF-1224,SIT,R25,Ana,2026-08-14,37,Sí,No
+TC-0225,Validar apertura,Cuentas,Cierre,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,13,Sí,Sí
+TC-0226,Validar reversos,Pagos,Pago de servicios,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-06,57,Sí,No
+TC-0227,Validar reversos,Pagos,LBTR,API,Alta,Bloqueado,Media,DEF-1038,UAT,R25,Miguel,2026-08-06,45,Sí,Sí
+TC-0228,Validar reversos,Préstamos,Desembolso,API,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-07,33,Sí,No
+TC-0229,Validar bloqueo,Clientes,Creación,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-08-03,10,Sí,Sí
+TC-0230,Validar cierre,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-07-12,20,Sí,No
+TC-0231,Validar pagos,Préstamos,Cuotas,Regresión,Media,Fallido,Media,DEF-1099,SIT,R25,José,2026-07-22,50,Sí,No
+TC-0232,Validar lbtr,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-17,6,Sí,No
+TC-0233,Validar lbtr,Pagos,LBTR,Integración,Media,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-13,0,No,Sí
+TC-0234,Validar reversos,Pagos,LBTR,Seguridad,Baja,No ejecutado,Sin defecto,,QA,R25,Elena,2026-07-21,0,No,No
+TC-0235,Validar pagos,Tarjetas,Emisión,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-15,41,Sí,Sí
+TC-0236,Validar cuotas,Préstamos,Cuotas,API,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-08,22,Sí,Sí
+TC-0237,Validar apertura,Cuentas,Mantenimiento,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,66,Sí,No
+TC-0238,Validar mantenimiento,Cuentas,Mantenimiento,Integración,Crítica,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-04,0,No,No
+TC-0239,Validar pago de servicios,Pagos,ACH,Seguridad,Alta,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-08,55,Sí,No
+TC-0240,Validar internas,Transferencias,Interbancarias,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-07-30,0,No,No
+TC-0241,Validar pagos,Préstamos,Cuotas,Regresión,Media,No ejecutado,Sin defecto,,SIT,R25,Miguel,2026-08-01,0,No,No
+TC-0242,Validar lbtr,Pagos,ACH,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-31,31,Sí,Sí
+TC-0243,Validar desembolso,Préstamos,Pagos,COB/EOD,Media,Fallido,Alta,DEF-1047,UAT,R25,Carlos,2026-07-01,44,Sí,Sí
+TC-0244,Validar creación,Clientes,Bloqueo,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-11,26,Sí,No
+TC-0245,Validar lbtr,Pagos,LBTR,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-17,38,Sí,No
+TC-0246,Validar mantenimiento,Cuentas,Mantenimiento,API,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-23,75,Sí,No
+TC-0247,Validar ach,Pagos,LBTR,Regresión,Crítica,Aprobado,Sin defecto,,SIT,R25,José,2026-07-24,73,Sí,Sí
+TC-0248,Validar debida diligencia,Clientes,Creación,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-21,21,Sí,No
+TC-0249,Validar bloqueo,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-23,12,Sí,Sí
+TC-0250,Validar reversos,Préstamos,Reversos,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-13,55,Sí,Sí
+TC-0251,Validar debida diligencia,Clientes,Actualización,COB/EOD,Baja,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-02,57,Sí,Sí
+TC-0252,Validar pagos,Préstamos,Reversos,Funcional,Alta,Fallido,Baja,DEF-1060,UAT,R25,Ana,2026-07-19,27,Sí,Sí
+TC-0253,Validar lbtr,Pagos,Pago de servicios,Funcional,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,21,Sí,Sí
+TC-0254,Validar lbtr,Pagos,Pago de servicios,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Ana,2026-08-14,0,No,Sí
+TC-0255,Validar creación,Clientes,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-12,48,Sí,No
+TC-0256,Validar lbtr,Pagos,Pago de servicios,API,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-09,47,Sí,Sí
+TC-0257,Validar actualización,Clientes,Debida diligencia,API,Media,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-10,72,Sí,No
+TC-0258,Validar pago de servicios,Pagos,Pago de servicios,Funcional,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-08-02,0,No,No
+TC-0259,Validar desembolso,Préstamos,Reversos,Integración,Baja,No ejecutado,Sin defecto,,QA,R25,Ana,2026-08-17,0,No,No
+TC-0260,Validar creación,Clientes,Bloqueo,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-09,7,Sí,No
+TC-0261,Validar emisión,Tarjetas,Emisión,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-08-16,0,No,No
+TC-0262,Validar reversos,Pagos,LBTR,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-07,36,Sí,Sí
+TC-0263,Validar actualización,Clientes,Debida diligencia,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-11,4,Sí,Sí
+TC-0264,Validar cuotas,Préstamos,Pagos,Regresión,Baja,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-30,18,Sí,No
+TC-0265,Validar internas,Transferencias,Internas,Integración,Alta,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-08,0,No,No
+TC-0266,Validar cargos,Cuentas,Cierre,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-11,23,Sí,No
+TC-0267,Validar creación,Clientes,Bloqueo,Funcional,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-01,19,Sí,No
+TC-0268,Validar pagos,Préstamos,Desembolso,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-07,63,Sí,No
+TC-0269,Validar interbancarias,Transferencias,Reversos,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-30,6,Sí,No
+TC-0270,Validar debida diligencia,Clientes,Bloqueo,Seguridad,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-08-17,59,Sí,Sí
+TC-0271,Validar debida diligencia,Clientes,Creación,COB/EOD,Alta,Bloqueado,Media,DEF-1271,SIT,R25,José,2026-08-04,63,Sí,No
+TC-0272,Validar pagos,Tarjetas,Bloqueo,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-19,62,Sí,Sí
+TC-0273,Validar internas,Transferencias,Internas,COB/EOD,Baja,Fallido,Baja,DEF-1273,SIT,R25,Laura,2026-07-03,6,Sí,No
+TC-0274,Validar interbancarias,Transferencias,Límites,Seguridad,Media,Fallido,Alta,DEF-1274,SIT,R25,Carlos,2026-07-27,16,Sí,No
+TC-0275,Validar creación,Clientes,Actualización,Seguridad,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-09,42,No,No
+TC-0276,Validar emisión,Tarjetas,Emisión,COB/EOD,Alta,No ejecutado,Sin defecto,,QA,R25,José,2026-07-28,0,No,No
+TC-0277,Validar cargos,Cuentas,Apertura,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-08,46,Sí,No
+TC-0278,Validar apertura,Cuentas,Cargos,COB/EOD,Media,Bloqueado,Media,DEF-1278,SIT,R25,Miguel,2026-07-09,7,Sí,No
+TC-0279,Validar ach,Pagos,LBTR,Funcional,Media,No ejecutado,Sin defecto,,SIT,R25,Elena,2026-07-29,0,No,No
+TC-0280,Validar interbancarias,Transferencias,Internas,Integración,Media,Bloqueado,Alta,DEF-1143,SIT,R25,Carlos,2026-07-13,72,Sí,No
+TC-0281,Validar mantenimiento,Cuentas,Apertura,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-02,4,Sí,No
+TC-0282,Validar consumos,Tarjetas,Consumos,Integración,Baja,Fallido,Media,DEF-1282,QA,R25,José,2026-07-20,26,Sí,Sí
+TC-0283,Validar actualización,Clientes,Debida diligencia,COB/EOD,Media,Fallido,Media,DEF-1043,QA,R25,Carlos,2026-08-07,33,No,Sí
+TC-0284,Validar consumos,Tarjetas,Pagos,API,Crítica,Fallido,Baja,DEF-1284,QA,R25,Carlos,2026-07-09,57,Sí,No
+TC-0285,Validar reversos,Transferencias,Interbancarias,Seguridad,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-14,46,Sí,No
+TC-0286,Validar reversos,Transferencias,Límites,Integración,Baja,Bloqueado,Media,DEF-1286,SIT,R25,Laura,2026-08-10,31,Sí,No
+TC-0287,Validar bloqueo,Tarjetas,Bloqueo,API,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-20,45,Sí,No
+TC-0288,Validar pagos,Préstamos,Pagos,API,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-20,0,No,Sí
+TC-0289,Validar bloqueo,Clientes,Debida diligencia,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-18,51,Sí,Sí
+TC-0290,Validar pago de servicios,Pagos,Reversos,COB/EOD,Media,Fallido,Baja,DEF-1290,UAT,R25,Miguel,2026-07-17,16,No,No
+TC-0291,Validar interbancarias,Transferencias,Interbancarias,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-18,19,Sí,Sí
+TC-0292,Validar pagos,Préstamos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-17,7,Sí,No
+TC-0293,Validar mantenimiento,Cuentas,Mantenimiento,Funcional,Media,Fallido,Baja,DEF-1055,UAT,R25,Miguel,2026-08-16,43,Sí,No
+TC-0294,Validar pago de servicios,Pagos,Pago de servicios,Seguridad,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-04,22,Sí,Sí
+TC-0295,Validar reversos,Préstamos,Reversos,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-09,16,Sí,No
+TC-0296,Validar mantenimiento,Cuentas,Apertura,Integración,Media,Fallido,Alta,DEF-1296,QA,R25,Laura,2026-07-04,4,Sí,Sí
+TC-0297,Validar lbtr,Pagos,Reversos,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-02,7,Sí,Sí
+TC-0298,Validar bloqueo,Clientes,Actualización,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-08-03,31,Sí,No
+TC-0299,Validar ach,Pagos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-25,53,Sí,No
+TC-0300,Validar reversos,Transferencias,Reversos,Seguridad,Media,Fallido,Alta,DEF-1274,UAT,R25,Elena,2026-07-20,56,Sí,Sí
+TC-0301,Validar pagos,Préstamos,Pagos,Funcional,Media,Aprobado,Sin defecto,,QA,R25,José,2026-08-14,48,Sí,No
+TC-0302,Validar pago de servicios,Pagos,Pago de servicios,Regresión,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-05,56,Sí,No
+TC-0303,Validar actualización,Clientes,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-23,34,Sí,No
+TC-0304,Validar bloqueo,Tarjetas,Bloqueo,Seguridad,Baja,No ejecutado,Sin defecto,,UAT,R25,José,2026-07-31,0,No,No
+TC-0305,Validar creación,Clientes,Bloqueo,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-11,26,Sí,No
+TC-0306,Validar bloqueo,Tarjetas,Bloqueo,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-17,19,Sí,No
+TC-0307,Validar apertura,Cuentas,Apertura,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-30,68,Sí,Sí
+TC-0308,Validar pagos,Préstamos,Cuotas,API,Crítica,Aprobado,Sin defecto,,UAT,R25,José,2026-08-04,23,Sí,Sí
+TC-0309,Validar apertura,Cuentas,Cierre,COB/EOD,Baja,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-21,33,Sí,Sí
+TC-0310,Validar reversos,Préstamos,Desembolso,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-08-07,51,Sí,Sí
+TC-0311,Validar límites,Transferencias,Límites,Funcional,Media,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-03,59,Sí,No
+TC-0312,Validar cierre,Cuentas,Cierre,Integración,Media,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-10,64,Sí,No
+TC-0313,Validar bloqueo,Clientes,Actualización,Regresión,Crítica,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-27,48,No,Sí
+TC-0314,Validar pago de servicios,Pagos,Reversos,Funcional,Media,No ejecutado,Sin defecto,,UAT,R25,Laura,2026-08-01,0,No,No
+TC-0315,Validar debida diligencia,Clientes,Bloqueo,Regresión,Alta,Fallido,Media,DEF-1315,QA,R25,Miguel,2026-07-07,16,Sí,No
+TC-0316,Validar cargos,Cuentas,Cargos,Integración,Alta,Fallido,Alta,DEF-1296,QA,R25,Elena,2026-08-05,39,Sí,No
+TC-0317,Validar desembolso,Préstamos,Reversos,COB/EOD,Baja,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-01,13,Sí,No
+TC-0318,Validar reversos,Préstamos,Reversos,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-13,22,Sí,Sí
+TC-0319,Validar debida diligencia,Clientes,Creación,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-13,46,Sí,No
+TC-0320,Validar actualización,Clientes,Bloqueo,COB/EOD,Media,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,18,Sí,No
+TC-0321,Validar debida diligencia,Clientes,Actualización,Seguridad,Baja,No ejecutado,Sin defecto,,QA,R25,Miguel,2026-07-15,0,No,No
+TC-0322,Validar apertura,Cuentas,Apertura,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-07-19,74,Sí,No
+TC-0323,Validar desembolso,Préstamos,Cuotas,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-01,66,Sí,Sí
+TC-0324,Validar pagos,Tarjetas,Consumos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-16,14,Sí,No
+TC-0325,Validar emisión,Tarjetas,Emisión,API,Media,Bloqueado,Alta,DEF-1224,UAT,R25,José,2026-07-30,21,Sí,Sí
+TC-0326,Validar bloqueo,Clientes,Actualización,COB/EOD,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-08,38,Sí,Sí
+TC-0327,Validar pagos,Préstamos,Reversos,COB/EOD,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-08-13,15,Sí,No
+TC-0328,Validar bloqueo,Clientes,Bloqueo,COB/EOD,Baja,Fallido,Media,DEF-1315,UAT,R25,Laura,2026-07-22,44,Sí,Sí
+TC-0329,Validar reversos,Transferencias,Internas,Seguridad,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-07-28,6,No,No
+TC-0330,Validar mantenimiento,Cuentas,Cierre,Integración,Alta,Fallido,Alta,DEF-1296,SIT,R25,Laura,2026-07-17,6,Sí,No
+TC-0331,Validar consumos,Tarjetas,Bloqueo,Seguridad,Baja,Fallido,Baja,DEF-1284,UAT,R25,Laura,2026-08-09,15,Sí,Sí
+TC-0332,Validar límites,Transferencias,Internas,Funcional,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-08-07,31,Sí,No
+TC-0333,Validar ach,Pagos,Reversos,COB/EOD,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-10,7,Sí,Sí
+TC-0334,Validar límites,Transferencias,Límites,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-08,25,Sí,No
+TC-0335,Validar ach,Pagos,LBTR,Regresión,Crítica,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-26,0,No,Sí
+TC-0336,Validar desembolso,Préstamos,Desembolso,API,Crítica,Aprobado,Sin defecto,,UAT,R25,José,2026-07-25,31,Sí,No
+TC-0337,Validar mantenimiento,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Miguel,2026-07-24,15,Sí,Sí
+TC-0338,Validar reversos,Préstamos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-27,23,Sí,No
+TC-0339,Validar reversos,Pagos,Reversos,Integración,Crítica,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-02,54,Sí,No
+TC-0340,Validar pagos,Tarjetas,Pagos,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Elena,2026-07-25,0,No,No
+TC-0341,Validar ach,Pagos,Reversos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Carlos,2026-07-02,35,Sí,No
+TC-0342,Validar lbtr,Pagos,Pago de servicios,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-29,18,Sí,Sí
+TC-0343,Validar bloqueo,Clientes,Actualización,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-04,39,Sí,No
+TC-0344,Validar interbancarias,Transferencias,Límites,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,José,2026-07-18,62,No,No
+TC-0345,Validar cierre,Cuentas,Cargos,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-30,49,Sí,Sí
+TC-0346,Validar emisión,Tarjetas,Pagos,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Ana,2026-07-04,39,Sí,No
+TC-0347,Validar consumos,Tarjetas,Bloqueo,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-04,59,Sí,Sí
+TC-0348,Validar emisión,Tarjetas,Consumos,Regresión,Media,No ejecutado,Sin defecto,,UAT,R25,Miguel,2026-07-06,0,No,No
+TC-0349,Validar mantenimiento,Cuentas,Cargos,Regresión,Alta,No ejecutado,Sin defecto,,SIT,R25,Ana,2026-07-22,0,No,No
+TC-0350,Validar actualización,Clientes,Actualización,COB/EOD,Alta,Fallido,Baja,DEF-1021,UAT,R25,Laura,2026-07-11,42,Sí,No
+TC-0351,Validar bloqueo,Tarjetas,Consumos,COB/EOD,Alta,Bloqueado,Alta,DEF-1224,SIT,R25,Ana,2026-08-14,25,Sí,No
+TC-0352,Validar bloqueo,Tarjetas,Emisión,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-15,48,Sí,Sí
+TC-0353,Validar creación,Clientes,Actualización,Funcional,Media,Fallido,Alta,DEF-1353,QA,R25,José,2026-08-09,50,Sí,Sí
+TC-0354,Validar reversos,Pagos,LBTR,Funcional,Media,Fallido,Baja,DEF-1290,QA,R25,Miguel,2026-07-10,30,Sí,No
+TC-0355,Validar cargos,Cuentas,Mantenimiento,API,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-30,39,Sí,Sí
+TC-0356,Validar creación,Clientes,Debida diligencia,Seguridad,Media,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-07-12,0,No,No
+TC-0357,Validar cargos,Cuentas,Cargos,COB/EOD,Baja,No ejecutado,Sin defecto,,SIT,R25,Carlos,2026-07-11,0,No,No
+TC-0358,Validar cargos,Cuentas,Mantenimiento,COB/EOD,Media,Fallido,Baja,DEF-1358,QA,R25,Laura,2026-08-16,32,Sí,Sí
+TC-0359,Validar bloqueo,Clientes,Creación,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-05,12,Sí,Sí
+TC-0360,Validar pagos,Préstamos,Reversos,COB/EOD,Alta,Fallido,Alta,DEF-1360,UAT,R25,José,2026-08-09,65,Sí,No
+TC-0361,Validar actualización,Clientes,Actualización,Regresión,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-04,31,Sí,Sí
+TC-0362,Validar ach,Pagos,LBTR,Integración,Baja,No ejecutado,Sin defecto,,UAT,R25,Carlos,2026-07-14,0,No,No
+TC-0363,Validar ach,Pagos,LBTR,Seguridad,Crítica,Fallido,Alta,DEF-1186,QA,R25,Miguel,2026-08-03,28,Sí,No
+TC-0364,Validar cierre,Cuentas,Cierre,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-08-01,35,Sí,Sí
+TC-0365,Validar bloqueo,Clientes,Actualización,Seguridad,Media,Aprobado,Sin defecto,,UAT,R25,Ana,2026-08-15,38,Sí,Sí
+TC-0366,Validar cuotas,Préstamos,Pagos,COB/EOD,Alta,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-15,33,Sí,Sí
+TC-0367,Validar pagos,Préstamos,Desembolso,Seguridad,Media,No ejecutado,Sin defecto,,QA,R25,Laura,2026-07-28,0,No,No
+TC-0368,Validar apertura,Cuentas,Cargos,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,64,Sí,No
+TC-0369,Validar cargos,Cuentas,Cierre,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-07,74,Sí,No
+TC-0370,Validar mantenimiento,Cuentas,Cierre,Regresión,Baja,Fallido,Media,DEF-1370,QA,R25,Miguel,2026-07-05,21,Sí,Sí
+TC-0371,Validar creación,Clientes,Actualización,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-20,73,Sí,No
+TC-0372,Validar cierre,Cuentas,Cargos,Integración,Alta,Fallido,Alta,DEF-1372,SIT,R25,Ana,2026-08-07,5,Sí,No
+TC-0373,Validar pago de servicios,Pagos,Pago de servicios,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Elena,2026-07-03,70,Sí,No
+TC-0374,Validar límites,Transferencias,Reversos,Regresión,Alta,Fallido,Media,DEF-1198,UAT,R25,Ana,2026-08-06,4,No,No
+TC-0375,Validar apertura,Cuentas,Mantenimiento,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Miguel,2026-07-26,38,Sí,Sí
+TC-0376,Validar apertura,Cuentas,Cierre,Regresión,Alta,No ejecutado,Sin defecto,,SIT,R25,Laura,2026-08-09,0,No,No
+TC-0377,Validar apertura,Cuentas,Mantenimiento,Integración,Crítica,Aprobado,Sin defecto,,QA,R25,Laura,2026-08-03,24,No,No
+TC-0378,Validar pagos,Tarjetas,Pagos,Integración,Baja,Fallido,Alta,DEF-1191,QA,R25,Laura,2026-07-08,39,Sí,Sí
+TC-0379,Validar pago de servicios,Pagos,ACH,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-08-14,18,Sí,No
+TC-0380,Validar internas,Transferencias,Límites,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-05,25,Sí,No
+TC-0381,Validar cargos,Cuentas,Mantenimiento,API,Baja,Aprobado,Sin defecto,,SIT,R25,Laura,2026-07-07,57,Sí,Sí
+TC-0382,Validar reversos,Pagos,LBTR,API,Crítica,Aprobado,Sin defecto,,UAT,R25,Laura,2026-07-04,47,Sí,Sí
+TC-0383,Validar límites,Transferencias,Reversos,API,Baja,Fallido,Alta,DEF-1274,QA,R25,José,2026-08-02,11,Sí,Sí
+TC-0384,Validar actualización,Clientes,Creación,COB/EOD,Crítica,Fallido,Media,DEF-1315,SIT,R25,Miguel,2026-07-20,52,Sí,No
+TC-0385,Validar debida diligencia,Clientes,Bloqueo,Regresión,Baja,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-08,50,Sí,No
+TC-0386,Validar actualización,Clientes,Actualización,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-27,10,Sí,No
+TC-0387,Validar lbtr,Pagos,Reversos,API,Media,Fallido,Media,DEF-1129,SIT,R25,Elena,2026-07-08,19,Sí,No
+TC-0388,Validar actualización,Clientes,Debida diligencia,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,José,2026-08-14,62,No,Sí
+TC-0389,Validar actualización,Clientes,Actualización,Funcional,Alta,Aprobado,Sin defecto,,QA,R25,Elena,2026-07-09,6,Sí,No
+TC-0390,Validar cuotas,Préstamos,Pagos,COB/EOD,Crítica,Fallido,Alta,DEF-1360,QA,R25,Elena,2026-07-10,67,Sí,No
+TC-0391,Validar reversos,Pagos,Reversos,Funcional,Media,Bloqueado,Alta,DEF-1391,QA,R25,Laura,2026-08-09,73,Sí,No
+TC-0392,Validar interbancarias,Transferencias,Límites,Regresión,Crítica,No ejecutado,Sin defecto,,SIT,R25,José,2026-08-03,0,No,Sí
+TC-0393,Validar mantenimiento,Cuentas,Mantenimiento,Integración,Alta,Aprobado,Sin defecto,,UAT,R25,José,2026-07-25,59,Sí,No
+TC-0394,Validar pagos,Préstamos,Desembolso,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Ana,2026-08-14,59,Sí,No
+TC-0395,Validar reversos,Pagos,LBTR,COB/EOD,Alta,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-28,14,Sí,No
+TC-0396,Validar consumos,Tarjetas,Bloqueo,Integración,Baja,Aprobado,Sin defecto,,QA,R25,José,2026-07-10,14,Sí,No
+TC-0397,Validar cargos,Cuentas,Cargos,API,Baja,Aprobado,Sin defecto,,UAT,R25,Elena,2026-08-03,68,Sí,No
+TC-0398,Validar límites,Transferencias,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-07-21,19,Sí,No
+TC-0399,Validar reversos,Préstamos,Cuotas,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-05,38,Sí,No
+TC-0400,Validar reversos,Préstamos,Reversos,Regresión,Crítica,Bloqueado,Media,DEF-1085,QA,R25,Elena,2026-07-28,42,Sí,No
+TC-0401,Validar actualización,Clientes,Debida diligencia,Funcional,Crítica,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-03,64,Sí,No
+TC-0402,Validar cierre,Cuentas,Mantenimiento,Seguridad,Media,Aprobado,Sin defecto,,QA,R25,Elena,2026-08-11,35,Sí,No
+TC-0403,Validar cuotas,Préstamos,Pagos,Regresión,Media,Fallido,Media,DEF-1403,QA,R25,José,2026-08-14,6,Sí,No
+TC-0404,Validar pagos,Préstamos,Reversos,API,Media,Aprobado,Sin defecto,,QA,R25,José,2026-08-06,17,Sí,No
+TC-0405,Validar reversos,Transferencias,Reversos,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-06,8,Sí,No
+TC-0406,Validar pagos,Préstamos,Desembolso,Seguridad,Media,Aprobado,Sin defecto,,SIT,R25,José,2026-07-02,18,Sí,Sí
+TC-0407,Validar reversos,Pagos,Pago de servicios,Funcional,Crítica,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-28,34,Sí,No
+TC-0408,Validar ach,Pagos,ACH,Integración,Baja,Aprobado,Sin defecto,,UAT,R25,Laura,2026-08-13,52,Sí,Sí
+TC-0409,Validar apertura,Cuentas,Cargos,Funcional,Media,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-08,30,Sí,Sí
+TC-0410,Validar actualización,Clientes,Actualización,Regresión,Alta,Aprobado,Sin defecto,,UAT,R25,Miguel,2026-07-10,56,Sí,Sí
+TC-0411,Validar interbancarias,Transferencias,Límites,Regresión,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-08,17,Sí,No
+TC-0412,Validar pagos,Préstamos,Cuotas,Funcional,Media,Aprobado,Sin defecto,,SIT,R25,Elena,2026-08-09,55,Sí,Sí
+TC-0413,Validar cuotas,Préstamos,Cuotas,Funcional,Alta,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-02,45,Sí,Sí
+TC-0414,Validar cuotas,Préstamos,Desembolso,Regresión,Alta,Aprobado,Sin defecto,,QA,R25,Ana,2026-07-14,41,Sí,No
+TC-0415,Validar apertura,Cuentas,Cierre,Integración,Baja,Aprobado,Sin defecto,,SIT,R25,José,2026-08-08,20,Sí,Sí
+TC-0416,Validar límites,Transferencias,Internas,Seguridad,Baja,Aprobado,Sin defecto,,SIT,R25,Elena,2026-07-17,71,Sí,Sí
+TC-0417,Validar cuotas,Préstamos,Desembolso,Integración,Media,Aprobado,Sin defecto,,UAT,R25,Carlos,2026-07-15,8,Sí,No
+TC-0418,Validar cargos,Cuentas,Cierre,Regresión,Media,Aprobado,Sin defecto,,SIT,R25,Laura,2026-08-13,23,Sí,No
+TC-0419,Validar actualización,Clientes,Creación,Regresión,Media,Aprobado,Sin defecto,,UAT,R25,José,2026-07-05,69,Sí,No
+TC-0420,Validar bloqueo,Tarjetas,Pagos,Integración,Alta,Aprobado,Sin defecto,,SIT,R25,Carlos,2026-07-26,49,Sí,No
