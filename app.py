@@ -16,7 +16,6 @@ st.set_page_config(
 )
 
 DATA_PATH = Path(__file__).parent / "data" / "casos_prueba_banco_ficticio.csv"
-LOGO_PATH = Path(__file__).parent / "assets" / "finlabs_logo.png"
 BRAND_BLUE = "#0B5D7A"
 BRAND_DARK_BLUE = "#083B55"
 BRAND_YELLOW = "#F4B223"
@@ -67,9 +66,23 @@ st.markdown(
     [data-testid="stSidebar"] input {color: #ffffff !important;}
     [data-testid="stSidebar"] [data-baseweb="select"] svg,
     [data-testid="stSidebar"] [data-baseweb="tag"] svg {fill: #F4B223;}
-    [data-testid="stSidebar"] [data-testid="stImage"] {
+    .gjemar-logo {
         background: #ffffff; border-radius: 10px; padding: 12px;
-        margin-bottom: .7rem; box-shadow: 0 3px 10px rgba(0,0,0,.18);
+        margin-bottom: .7rem; text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,.18);
+        font-family: Arial, sans-serif; line-height: 1;
+    }
+    .gjemar-logo .gje, .gjemar-logo .ar {
+        color: #0B5D7A !important; font-size: 2.35rem; font-weight: 800;
+        letter-spacing: .03em;
+    }
+    .gjemar-logo .m {
+        color: #F4B223 !important; font-size: 2.35rem; font-weight: 800;
+        letter-spacing: .03em;
+    }
+    .gjemar-logo .tagline {
+        color: #0B5D7A !important; font-size: .58rem; font-weight: 700;
+        letter-spacing: .13em; margin-top: .35rem;
     }
     [data-testid="stMetric"] {
         background: white; border: 1px solid #D6E5EC; border-top: 3px solid #F4B223;
@@ -94,7 +107,12 @@ st.markdown(
 df = load_data()
 
 with st.sidebar:
-    st.image(LOGO_PATH, width=260)
+    st.markdown(
+        '<div class="gjemar-logo"><span class="gje">GJE</span>'
+        '<span class="m">M</span><span class="ar">AR</span>'
+        '<div class="tagline">QUALITY · DATA · INNOVATION</div></div>',
+        unsafe_allow_html=True,
+    )
     st.title("🏦 Filtros QA")
     st.caption("Banco ficticio · Datos demostrativos")
     selected_modules = st.multiselect("Módulo", options("modulo"), default=options("modulo"))
