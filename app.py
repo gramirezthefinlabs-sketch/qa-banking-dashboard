@@ -1,11 +1,10 @@
-from math import sqrt
+from math import erfc, exp, factorial, lgamma, log, sqrt
 from pathlib import Path
 
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from scipy.stats import chi2_contingency
 
 
 st.set_page_config(
@@ -46,6 +45,56 @@ def options(column: str) -> list[str]:
 
 def metric_card(label: str, value: str, help_text: str) -> None:
     st.metric(label=label, value=value, help=help_text)
+
+
+def chi_square_survival(statistic: float, degrees_freedom: int) -> float:
+    """Calcula el valor p de Chi-cuadrada sin librerías estadísticas externas."""
+    if statistic <= 0:
+        return 1.0
+
+    half_statistic = statistic / 2
+    if degrees_freedom % 2 == 0:
+        terms = degrees_freedom // 2
+        return exp(-half_statistic) * sum(
+            half_statistic**index / factorial(index)
+            for index in range(terms)
+        )
+
+    terms = (degrees_freedom - 1) // 2
+    probability = erfc(sqrt(half_statistic))
+    for index in range(terms):
+        shape = index + 0.5
+        probability += exp(
+            -half_statistic
+            + shape * log(half_statistic)
+            - lgamma(shape + 1)
+        )
+    return min(max(probability, 0.0), 1.0)
+
+
+def chi_square_test(contingency: pd.DataFrame) -> tuple[float, float, int]:
+    """Calcula Chi-cuadrada, valor p y grados de libertad con Pandas y Python."""
+    observed = contingency.astype(float)
+    row_totals = observed.sum(axis=1)
+    column_totals = observed.sum(axis=0)
+    observations = float(observed.to_numpy().sum())
+    expected = pd.DataFrame(
+        index=observed.index,
+        columns=observed.columns,
+        dtype=float,
+    )
+    for row_name in observed.index:
+        expected.loc[row_name] = (
+            row_totals.loc[row_name] * column_totals / observations
+        )
+    statistic = float(
+        (((observed - expected) ** 2) / expected).to_numpy().sum()
+    )
+    degrees_freedom = (
+        (observed.shape[0] - 1) * (observed.shape[1] - 1)
+    )
+    p_value = chi_square_survival(statistic, degrees_freedom)
+    return statistic, p_value, degrees_freedom
 
 
 st.markdown(
@@ -599,9 +648,7 @@ with tab_risk:
         st.plotly_chart(association_heatmap, use_container_width=True)
 
         if contingency.shape[0] >= 2 and contingency.shape[1] >= 2:
-            chi2_value, p_value, degrees_freedom, _ = chi2_contingency(
-                contingency
-            )
+            chi2_value, p_value, degrees_freedom = chi_square_test(contingency)
             observations = contingency.to_numpy().sum()
             minimum_dimension = min(
                 contingency.shape[0] - 1,
