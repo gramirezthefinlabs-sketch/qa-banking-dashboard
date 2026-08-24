@@ -66,6 +66,15 @@ st.markdown(
     [data-testid="stSidebar"] input {color: #ffffff !important;}
     [data-testid="stSidebar"] [data-baseweb="select"] svg,
     [data-testid="stSidebar"] [data-baseweb="tag"] svg {fill: #F4B223;}
+    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] {
+        background: #F4B223 !important; border-color: #F4B223 !important;
+    }
+    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] span {
+        color: #083B55 !important; font-weight: 600;
+    }
+    [data-testid="stSidebar"] .st-key-module_filter [data-baseweb="tag"] svg {
+        fill: #083B55 !important;
+    }
     .gjemar-logo {
         background: #ffffff; border-radius: 10px; padding: 12px;
         margin-bottom: .7rem; text-align: center;
@@ -115,7 +124,12 @@ with st.sidebar:
     )
     st.title("🏦 Filtros QA")
     st.caption("Banco ficticio · Datos demostrativos")
-    selected_modules = st.multiselect("Módulo", options("modulo"), default=options("modulo"))
+    selected_modules = st.multiselect(
+        "Módulo",
+        options("modulo"),
+        default=options("modulo"),
+        key="module_filter",
+    )
     selected_statuses = st.multiselect("Estado", options("estado"), default=options("estado"))
     selected_priorities = st.multiselect("Prioridad", options("prioridad"), default=options("prioridad"))
     selected_environments = st.multiselect("Ambiente", options("ambiente"), default=options("ambiente"))
